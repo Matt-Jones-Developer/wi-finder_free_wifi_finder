@@ -1,7 +1,7 @@
 {
-  "name": "topspot_wifi_hotspot_location_app",
+  "name": "wi-finder_wifi_hotspot_location_app",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/topspot_wifi_search_tool",
+  "homepage": "https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
