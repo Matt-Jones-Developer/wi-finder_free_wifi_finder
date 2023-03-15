@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Matt Jones",
-      "title":"Chief React Front-End Dev",
+      "jobTitle":"Chief React Front-End Dev",
       "profilePic":"",
       "about": "Front End Developer and UI Designer with an eye for detail.  Loves building intuitive, attractive applications using React & Tailwind.  When not coding, you'll find him playing Thrash Metal on his guitar!",
       "linkedInUrl": "https://www.linkedin.com/in/matt-jones-zx81/",
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "Marc Hudson",
-        "title":"Software Designer & Front end  Developer",
+        "jobTitle":"Software Designer & Front end  Developer",
         "profilePic": "",
         "about": "I aim to make the internet beautiful, functional, and accessible for everyone.",
         "linkedInUrl": "",
@@ -20,7 +20,7 @@
       {
         "id": 3,
         "name": "Kelvin",
-        "title":"",
+        "jobTitle":"",
         "profilePic": "",
         "about": "",
         "linkedInUrl": "",
@@ -29,7 +29,7 @@
       {
         "id": 4,
         "name": "Fionnuala O'Donnell",
-        "title":"UX Architect",
+        "jobTitle":"UX Architect",
         "profilePic": "",
         "about": "A UX Designer with a passion for the museum and heritage sector. My ambition is to help institutions grow in the digital world, broadening engagement by enhancing accessibility through stylish and modern design. I aim to build user-friendly interfaces that empower users to explore and interact with cultural content in meaningful ways",
         "linkedInUrl": "https://www.linkedin.com/in/fionnuala-o-donnell-b619a337/",
