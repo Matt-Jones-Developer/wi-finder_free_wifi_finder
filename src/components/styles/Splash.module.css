@@ -1,0 +1,40 @@
+.splash {
+  background-color: var(--bg-tone);
+  opacity: 80%;
+}
+
+.btn:hover {
+  background-color: var(--lime);
+  color: var(--text-dark);
+}
+
+.btn_lg{
+  background-image: url(../../assets/png/wifi_logo_bo.png);
+}
+
+.btn_lg:hover {
+  background-image: url(../../assets/png/wifi_logo_gb.png);
+}
+
+.splashBottom {
+  height: 50vh;
+  background-color: var(--lime);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-image: var(--gradient),
+    url("../../assets/png/network_neural.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.card {
+  background-color: var(--bg-tone);
+}
