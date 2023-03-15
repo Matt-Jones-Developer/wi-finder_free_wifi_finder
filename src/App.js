@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import NavBar from './components/NavBar';
@@ -10,18 +9,15 @@ import './App.css'
 
 const App = () => {
   return (
-    <Router>
-      {/* <NavBar /> */}
-      {/* <Header /> */}
+    <Router basename="/wi-finder_free_wifi_finder">
       <Routes>
         <Route path="/" element={<Main />} index={true} />
-        {/* <Route path="/new" element={<New />} /> */}
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 };
 
 export default App;
+
 
 
