@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/topspot_wifi_search_tool/static/css/main.073c9b0a.css",
-    "main.js": "/topspot_wifi_search_tool/static/js/main.56c98c59.js",
-    "static/js/787.3dfe50c8.chunk.js": "/topspot_wifi_search_tool/static/js/787.3dfe50c8.chunk.js",
-    "static/media/logo.svg": "/topspot_wifi_search_tool/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/topspot_wifi_search_tool/index.html",
-    "main.073c9b0a.css.map": "/topspot_wifi_search_tool/static/css/main.073c9b0a.css.map",
-    "main.56c98c59.js.map": "/topspot_wifi_search_tool/static/js/main.56c98c59.js.map",
-    "787.3dfe50c8.chunk.js.map": "/topspot_wifi_search_tool/static/js/787.3dfe50c8.chunk.js.map"
+    "main.css": "/wi-finder_free_wifi_finder/static/css/main.05d828aa.css",
+    "main.js": "/wi-finder_free_wifi_finder/static/js/main.d62a45cc.js",
+    "static/js/787.4bbcb4f1.chunk.js": "/wi-finder_free_wifi_finder/static/js/787.4bbcb4f1.chunk.js",
+    "static/media/network_neural.png": "/wi-finder_free_wifi_finder/static/media/network_neural.a42e34a0b3e78df8fd4d.png",
+    "static/media/wifi_bnw_logo.png": "/wi-finder_free_wifi_finder/static/media/wifi_bnw_logo.baddd34932b07b2c5181.png",
+    "static/media/wifi_logo_gb.png": "/wi-finder_free_wifi_finder/static/media/wifi_logo_gb.4ae5eec1f6c7f8e8ec14.png",
+    "static/media/wifi_logo_bo.png": "/wi-finder_free_wifi_finder/static/media/wifi_logo_bo.1a2e3bb990b38a40875f.png",
+    "index.html": "/wi-finder_free_wifi_finder/index.html",
+    "main.05d828aa.css.map": "/wi-finder_free_wifi_finder/static/css/main.05d828aa.css.map",
+    "main.d62a45cc.js.map": "/wi-finder_free_wifi_finder/static/js/main.d62a45cc.js.map",
+    "787.4bbcb4f1.chunk.js.map": "/wi-finder_free_wifi_finder/static/js/787.4bbcb4f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.56c98c59.js"
+    "static/css/main.05d828aa.css",
+    "static/js/main.d62a45cc.js"
   ]
 }
