@@ -1,14 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles/SearchForm.module.css";
-import btnStyles from "./styles/Button.module.css"
+import btnStyles from "./styles/Button.module.css";
 
 const SearchForm = () => {
+  // reveal form effect
+  // get current state, set state
+  const [revealed, setRevealed] = useState(false);
+  // handle y scroll
+  useEffect(() => {
+    function handleScroll() {
+        // if user scrolls (reveal)
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+          setRevealed(true);
+        } else {
+          setRevealed(false);
+        }
+      }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // current states and setStates
   const [enteredLocation, setEnteredLocation] = useState("");
   const [enteredRange, setEnteredRange] = useState("");
-
-
+  // on user input
   const locationChangeHandler = (event) => {
     // save the value
     setEnteredLocation(event.target.value);
@@ -17,15 +35,15 @@ const SearchForm = () => {
   const rangeChangeHandler = (event) => {
     setEnteredRange(event.target.value);
   };
-
+  // button submit handling
   const submitHandler = (event) => {
     event.preventDefault();
-
+    // store object
     const locationData = {
       location: enteredLocation,
-      range: enteredRange
+      range: enteredRange,
     };
-
+    // clear form
     console.log(locationData);
     // reset value to "" using 2-way binding
     setEnteredLocation("");
@@ -35,9 +53,13 @@ const SearchForm = () => {
   return (
     <div
       className={`${styles.formInput} container flex text-center
-      p-4 justify-center bg-tone max-w-full p-4 mx-auto`}
+      p-4 justify-center bg-tone max-w-full p-4 mx-auto mt-6`}
     >
-      <form onSubmit={submitHandler}>
+      <form
+        className={`transform transition-all duration-500 ease-out 
+          ${revealed ? "revealed" : "translate-y-full"}`}
+        onSubmit={submitHandler}
+      >
         <div className={`${styles.locationInputControls}`}>
           <div className={`${styles.locationInputControl}`}>
             <label>Location</label>
@@ -59,10 +81,13 @@ const SearchForm = () => {
           </div>
         </div>
         <div className={`${styles.locationInputAction}`}>
-          <button 
-          className={`${btnStyles.btn} bg-purps text-white 
+          <button
+            className={`${btnStyles.btn} bg-purps text-white 
           rounded-full py-2 px-4`}
-          type="submit">Add Location</button>
+            type="submit"
+          >
+            Add Location
+          </button>
         </div>
       </form>
     </div>

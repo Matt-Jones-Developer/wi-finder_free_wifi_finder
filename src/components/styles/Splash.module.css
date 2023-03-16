@@ -3,6 +3,11 @@
   opacity: 80%;
 }
 
+/* .splashRevealed {
+  height: 70vh;
+  transition: height 0.5s ease-out;
+} */
+
 .splashBottom {
   background-color: var(--lime);
 }
