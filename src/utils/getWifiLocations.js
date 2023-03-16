@@ -12,7 +12,7 @@ function sortByDistance(a, b) {
     return 0;
 }
 
-export default function getWifiLocations(lon, lat) {
+export default function getWifiLocations(lon, lat, range = 7000) {
     const categories = [
         "accommodation",
         "education.library",
@@ -38,7 +38,7 @@ export default function getWifiLocations(lon, lat) {
     const queryString = new URLSearchParams({
         conditions,
         categories,
-        filter: `circle:${lon},${lat},7000`,
+        filter: `circle:${lon},${lat},${range}`,
         limit: 20,
         apiKey: process.env.REACT_APP_PLACES_API_KEY,
     }).toString()

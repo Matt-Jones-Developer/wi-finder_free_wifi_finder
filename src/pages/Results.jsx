@@ -14,22 +14,24 @@ export default () => {
 
   // http://localhost:3000/results?location=london
   const location = searchParams.get("location");
-  const categories = searchParams.get("categories")?.split(",");
+  // const categories = searchParams.get("categories")?.split(",");
+  const range = searchParams.get("range");
 
-  console.log(location);
-  console.log(categories);
+  // console.log(location);
+  // console.log(categories);
 
   React.useEffect(() => {
     async function init() {
       if (location) {
         const { lon, lat } = await getPlaceLonLat(location);
-        const locations = await getWifiLocations(lon, lat);
+        const locations = await getWifiLocations(lon, lat, range);
         setWifiLocations(locations);
       } else {
         const currentLocation = await getCurrentLocation();
         const locations = await getWifiLocations(
           currentLocation.lon,
-          currentLocation.lat
+          currentLocation.lat,
+          range
         );
         setWifiLocations(locations);
       }
@@ -44,20 +46,38 @@ export default () => {
       </div>
       {wifiLocations.map((wifiLocation) => {
         return (
-          <div class="main">
-            <input type="checkbox" id="drop-1" hidden />
-            <label
-              class="dropHeader dropHeader-1"
-              for="drop-1"
-              key={wifiLocation.name}
-            >
-              {wifiLocation.name}
-            </label>
-            <div class="list list-1">
-              <div class="item">Option one</div>
-              <div class="item">Option two</div>
-              <div class="item">Option three</div>
-              <div class="item">Option four</div>
+          <div>
+            <div className="box">
+              <a className="button" href="#popup1" key={wifiLocation.name}>
+                {wifiLocation.name}
+              </a>
+            </div>
+
+            <div id="popup1" class="overlay">
+              <div className="popup">
+                <h2>Known info</h2>
+                <h2 key={wifiLocation.name}>{wifiLocation.name}</h2>
+                <a className="close" href="#">
+                  &times;
+                </a>
+                <div className="content">
+                  <p key={wifiLocation.fullAddress}>
+                    Address: {wifiLocation.fullAddress}
+                  </p>
+                  <a key={wifiLocation.website} href={wifiLocation.website}>
+                    website: {wifiLocation.website}
+                  </a>
+                  <p key={wifiLocation.openingHours}>
+                    Opening Hours: {wifiLocation.openingHours}
+                  </p>
+                  <p key={wifiLocation.contactNumbers}>
+                    Contact Number:{wifiLocation.contactNumbers}
+                  </p>
+                  <p key={wifiLocation.wheelChair}>
+                    wheelChair Safe:{wifiLocation.wheelChair}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         );

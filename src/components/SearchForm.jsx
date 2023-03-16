@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles/SearchForm.module.css";
 import btnStyles from "./styles/Button.module.css";
+import { useNavigate } from "react-router-dom";
 
 const SearchForm = () => {
   // reveal form effect
   // get current state, set state
   const [revealed, setRevealed] = useState(false);
+  const navigate = useNavigate();
   // handle y scroll
   useEffect(() => {
     function handleScroll() {
-        // if user scrolls (reveal)
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-          setRevealed(true);
-        } else {
-          setRevealed(false);
-        }
+      // if user scrolls (reveal)
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        setRevealed(true);
+      } else {
+        setRevealed(false);
       }
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -44,10 +46,13 @@ const SearchForm = () => {
       range: enteredRange,
     };
     // clear form
-    console.log(locationData);
-    // reset value to "" using 2-way binding
-    setEnteredLocation("");
-    setEnteredRange("");
+    // const checkedCategories = Array.from(categories)
+    //   .filter(([name, value]) => !!value)
+    //   .map(([name]) => name);
+
+    const queryString = new URLSearchParams(locationData).toString();
+
+    navigate(`/results?${queryString}`);
   };
 
   return (
