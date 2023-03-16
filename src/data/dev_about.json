@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Marc Hudson",
         "jobTitle":"Software Designer & Front end  Developer",
-        "profilePic": "",
+        "profilePic": "../assets/png/Marc_Hanson_ProfilePic.png",
         "about": "I aim to make the internet beautiful, functional, and accessible for everyone.",
         "linkedInUrl": "",
         "gitHubUrl": "https://github.com/marcahudson26 "
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Fionnuala O'Donnell",
         "jobTitle":"UX Architect",
-        "profilePic": "",
+        "profilePic": "../assets/jpg/Fionnuala_ODonnell_ProfilePic.jpeg",
         "about": "A UX Designer with a passion for the museum and heritage sector. My ambition is to help institutions grow in the digital world, broadening engagement by enhancing accessibility through stylish and modern design. I aim to build user-friendly interfaces that empower users to explore and interact with cultural content in meaningful ways",
         "linkedInUrl": "https://www.linkedin.com/in/fionnuala-o-donnell-b619a337/",
         "gitHubUrl": "https://github.com/Fi-OD/"
