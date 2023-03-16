@@ -1,0 +1,54 @@
+.main {
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+label {
+    width: 100%;
+    position: absolute;
+    line-height: 45px;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    padding-left: 20px;
+    font-weight: 700;
+    -webkit-transition: 0.04s ease-in-out;
+    transition: 0.04s ease-in-out;
+    color: black;
+}
+.list {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    left: 0px;
+    border-top: 1px solid #eee;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.item {
+    width: 100%;
+    line-height: 45px;
+    padding-left: 20px;
+    background-color: #fff;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    font-weight: 400;
+}
+.item:hover {
+    background-color: #eee;
+}
+
+/**********
+***********/
+
+#drop-1:checked~ .list-1 {
+    visibility: visible;
+    opacity: 2;
+    z-index: 10;
+}
