@@ -1,13 +1,14 @@
 import wifi_logo from "../assets/png/wifi_logo_gb.png";
 import freeWifi from "../assets/png/wifi_bnw_logo.png";
 import styles from "./styles/Splash.module.css";
+import SearchForm from "./SearchForm";
 
 const Splash = () => {
   return (
     <>
       <div
         className={`${styles.splash} container flex-1 text-center
-      p-4 bg-tone max-w-full p-4`}
+      bg-tone max-w-full p-4`}
       >
         <h1>
           <b>WiFi</b>nder
@@ -17,6 +18,7 @@ const Splash = () => {
           <img
             src={wifi_logo}
             alt="wifi logo"
+            width="350px"
             className="p-6 pt-8 mx-auto justify-center"
           />
         </button>
@@ -26,19 +28,19 @@ const Splash = () => {
         {/* content cards */}
         <div
           className={`${styles.card} shadow-md p-4
-        text-center mb-4`}
+        text-center`}
         >
-          <h2 className="text-lg font-medium mb-2 text-white-900 mb-4">
+          <h2 className="text-lg font-medium text-white-900">
             Grab Some free WiFi NOW
           </h2>
-          <p className="text-gray-500 mb-4">We can search for any location.</p>
-          <button
-            className={`${styles.btn} bg-purps text-white rounded-full
-           py-2 px-4 hover:bg-blue-600`}
-          >
-            Let's GO
-          </button>
+          <img
+            className="mx-auto -mb-2"
+            src={freeWifi}
+            alt="wifi stamp icon"
+            width="100px"
+          />
         </div>
+        <SearchForm />
       </div>
     </>
   );

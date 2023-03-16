@@ -9,7 +9,8 @@ import './App.css'
 
 const App = () => {
   return (
-    <Router >
+    <Router basename="/wi-finder_free_wifi_finder">
+      {/* // <Router> */}
       <Routes>
         <Route path="/" element={<Main />} index={true} />
         <Route path="/results" element={<Results />} />
