@@ -13,10 +13,10 @@ function Card(props) {
         <p>{props.about}</p>
           <div>
             <a href={props.gitHubUrl}>
-              <img src="" alt="GitHub Logo"></img>
+              <img src="../assets/png/github-mark.png" alt="GitHub Logo"></img>
             </a>
             <a href={props.linkedInUrl}>
-                <img src="" alt="LinedIn Logo"></img>
+                <img src="../assets/png/LI-Logo.png" alt="LinedIn Logo"></img>
             </a>
           </div>
           </div>
