@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Matt Jones",
+      "jobTitle":"Chief React Front-End Dev",
+      "profilePic":"",
+      "about": "Front End Developer and UI Designer with an eye for detail.  Loves building intuitive, attractive applications using React & Tailwind.  When not coding, you'll find him playing Thrash Metal on his guitar!",
+      "linkedInUrl": "https://www.linkedin.com/in/matt-jones-zx81/",
+      "gitHubUrl": "https://github.com/Matt-Jones-Developer"
+    },
+    {
+        "id": 2,
+        "name": "Marc Hudson",
+        "jobTitle":"Software Designer & Front end  Developer",
+        "profilePic": "../assets/png/Marc_Hanson_ProfilePic.png",
+        "about": "I aim to make the internet beautiful, functional, and accessible for everyone.",
+        "linkedInUrl": "",
+        "gitHubUrl": "https://github.com/marcahudson26 "
+      },
+      {
+        "id": 3,
+        "name": "Kelvin",
+        "jobTitle":"",
+        "profilePic": "",
+        "about": "",
+        "linkedInUrl": "",
+        "gitHubUrl": "https://github.com/DeveloperK7E"
+      },
+      {
+        "id": 4,
+        "name": "Fionnuala O'Donnell",
+        "jobTitle":"UX Architect",
+        "profilePic": "../assets/jpg/Fionnuala_ODonnell_ProfilePic.jpeg",
+        "about": "A UX Designer with a passion for the museum and heritage sector. My ambition is to help institutions grow in the digital world, broadening engagement by enhancing accessibility through stylish and modern design. I aim to build user-friendly interfaces that empower users to explore and interact with cultural content in meaningful ways",
+        "linkedInUrl": "https://www.linkedin.com/in/fionnuala-o-donnell-b619a337/",
+        "gitHubUrl": "https://github.com/Fi-OD/"
+      }
+]
