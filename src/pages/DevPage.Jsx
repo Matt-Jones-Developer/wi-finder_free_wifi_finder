@@ -4,6 +4,7 @@ import projectData from '../data/dev_about.json';
 import CardWrapper from '../components/CardWrapper';
 //import "./style.css"
 
+const DevPage = () => {
 <div>
 <div>
     <Routes>
@@ -14,7 +15,7 @@ import CardWrapper from '../components/CardWrapper';
 </div>
 </div>
 
-
+}
 
 
 export default DevPage
