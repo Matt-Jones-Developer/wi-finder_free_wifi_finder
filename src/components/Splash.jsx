@@ -4,9 +4,8 @@ import freeWifi from "../assets/png/wifi_bnw_logo.png";
 import styles from "./styles/Splash.module.css";
 import SearchForm from "./SearchForm";
 
-
 const Splash = () => {
-
+  
   return (
     <>
       <div
@@ -36,16 +35,17 @@ const Splash = () => {
           <h2 className="text-lg font-medium text-white-900">
             Grab Some free WiFi NOW
           </h2>
-          <img 
-          className="mx-auto -mb-2"
-          src={freeWifi} 
-          alt="wifi stamp icon"
-          width="100px" />
+          <img
+            className="mx-auto -mb-2"
+            src={freeWifi}
+            alt="wifi stamp icon"
+            width="100px"
+          />
         </div>
         <SearchForm />
       </div>
     </>
   );
-}
+};
 
 export default Splash;
