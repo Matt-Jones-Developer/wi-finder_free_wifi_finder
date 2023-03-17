@@ -10,7 +10,6 @@ export default function getCurrentLocation() {
     })
 }
 
-// google map Api key
-// AIzaSyBHqhirseGtyYg2Vz51l0srH9MUIqLpCTs
+
 
 
