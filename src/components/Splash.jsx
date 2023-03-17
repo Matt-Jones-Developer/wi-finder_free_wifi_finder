@@ -1,11 +1,11 @@
-
+import { useNavigate } from "react-router-dom";
 import wifi_logo from "../assets/png/wifi_logo_gb.png";
 import freeWifi from "../assets/png/wifi_bnw_logo.png";
 import styles from "./styles/Splash.module.css";
 import SearchForm from "./SearchForm";
 
 const Splash = () => {
-  
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -16,7 +16,7 @@ const Splash = () => {
           <b>WiFi</b>nder
         </h1>
         <h2>free Wi-Fi locator</h2>
-        <button className="btn_lg">
+        <button onClick={() => navigate("/results")} className="btn_lg">
           <img
             src={wifi_logo}
             alt="wifi logo"
