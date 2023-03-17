@@ -3,21 +3,12 @@
   opacity: 80%;
 }
 
-.btn:hover {
-  background-color: var(--lime);
-  color: var(--text-dark);
-}
-
-.btn_lg{
-  background-image: url(../../assets/png/wifi_logo_bo.png);
-}
-
-.btn_lg:hover {
-  background-image: url(../../assets/png/wifi_logo_gb.png);
-}
+/* .splashRevealed {
+  height: 70vh;
+  transition: height 0.5s ease-out;
+} */
 
 .splashBottom {
-  height: 50vh;
   background-color: var(--lime);
 }
 

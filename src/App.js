@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import DevPage from './pages/DevPage';
 import "./Api"
+import Results from './pages/Results';
+
 import './App.css'
 
 const App = () => {
@@ -14,7 +16,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Main />} index={true} />
-        <Route path="/devpage" element={<DevPage/>}/>
+        <Route path="/results" element={<Results />} />
+        <Route path="/devpage" element={<DevPage/>} />
       </Routes>
     </Router>
   );

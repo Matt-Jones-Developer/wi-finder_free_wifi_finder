@@ -1,0 +1,12 @@
+.btn:hover {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.btn_lg {
+  background-image: url(../../assets/png/wifi_logo_bo.png);
+}
+
+.btn_lg:hover {
+  background-image: url(../../assets/png/wifi_logo_gb.png);
+}

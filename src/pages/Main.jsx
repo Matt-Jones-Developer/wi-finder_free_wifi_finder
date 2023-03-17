@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+
 import styles from "./styles/Main.module.css";
 import Splash from "../components/Splash.jsx";
 
@@ -20,4 +23,3 @@ const Main = () => {
 };
 
 export default Main;
-
