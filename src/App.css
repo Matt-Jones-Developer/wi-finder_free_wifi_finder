@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root {                 
   --background: #292C33;
   --bg-dark: #20293A;
   --bg-light: #F7F9FA;
