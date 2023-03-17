@@ -2,7 +2,15 @@ import React from "react";
 import styles from "./styles/Card.module.css";
 import github_logo from "../assets/png/github-mark-white.png";
 import linkedIn_logo from "../assets/png/LI-In-Bug.png";
+import marcHudson from "../assets/png/Marc_Hudson_ProfilePic.png"
+import fiODonnell from "../assets/jpg/Fionnuala_ODonnell_ProfilePic.jpeg"
 
+const profileImages = {
+  1: marcHudson,
+  2: fiODonnell,
+}
+
+console.log(profileImages)
 
 function Card(props) {
 
@@ -29,12 +37,11 @@ function Card(props) {
           </div>
         </div>
         <div className="inline-flex justify-items-end">
-              <img className="bg-white object-contain w-28 h-28" src={props.profilePic} alt={props.name}></img>
+              <img className="object-contain w-28 h-28"src={profileImages[props.index]} alt={props.name}></img>            
             </div>
       </div>
     </div>
   );
 }
-
 
 export default Card;
