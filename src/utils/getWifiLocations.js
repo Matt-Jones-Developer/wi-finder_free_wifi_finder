@@ -12,50 +12,73 @@ function sortByDistance(a, b) {
     return 0;
 }
 
-export default function getWifiLocations(lon, lat, range = 7000) {
-    const categories = [
-        "accommodation",
-        "education.library",
-        "entertainment.museum",
-        "public_transport",
-        "commercial.gas",
-        "building.transportation",
-        "building.spa",
-        "beach.beach_resort",
-        "national_park",
+const categoryMap = {
+    leisure: [
         "leisure",
+        "building.spa",
         "entertainment",
+        "national_park",
+        "beach.beach_resort",
+    ],
+    library: [
+        "education.library",
+    ],
+    museums: [
+        "entertainment.museum",
+    ],
+    hotels: [
+        "accommodation",
+    ],
+    transport: [
+        "commercial.gas",
+        "public_transport",
+        "building.transportation",
+    ],
+    restaurants: [
         "catering",
+    ],
+    retail: [
         "commercial.supermarket",
         "commercial.shopping_mall",
         "tourism.information"
-    ].join(",")
+    ]
+}
+
+export default function getWifiLocations(lon, lat, range = 8000, categories = Object.keys(categoryMap)) {
+    const searchCategories = categories.flatMap(category => categoryMap[category])
 
     const conditions = [
         "internet_access.free"
-    ].join(",")
+    ]
 
     const queryString = new URLSearchParams({
-        conditions,
-        categories,
+        conditions: conditions.join(","),
+        categories: searchCategories.join(","),
         filter: `circle:${lon},${lat},${range}`,
-        limit: 20,
+        limit: 10,
         apiKey: process.env.REACT_APP_PLACES_API_KEY,
     }).toString()
 
     return fetch(`https://api.geoapify.com/v2/places?${queryString}`)
         .then((response) => response.json())
         .then((result) => {
-            return result.features.map((x) => ({
-                distance: calculateDistance(x.properties, { lon, lat }),
-                website: x.properties.datasource.raw.website,
-                name: x.properties.datasource.raw.name,
-                postcode: x.properties.postcode,
-                fullAddress: x.properties.formatted,
-                openingHours: x.properties.datasource.raw.opening_hours,
-                contactNumbers: x.properties.datasource.raw.phone,
-                wheelChair: x.properties.datasource.raw.wheelchair
-            })).sort(sortByDistance);
+            return result.features.map((x) => {
+                const coordinates = {
+                    lat: x.properties.lat,
+                    lon: x.properties.lon,
+                }
+                return {
+                    distance: calculateDistance(coordinates, { lon, lat }),
+                    coordinates,
+                    website: x.properties.datasource.raw.website,
+                    name: x.properties.datasource.raw.name,
+                    postcode: x.properties.postcode,
+                    fullAddress: x.properties.formatted,
+                    openingHours: x.properties.datasource.raw.opening_hours,
+                    contactNumbers: x.properties.datasource.raw.phone,
+                    wheelChair: x.properties.datasource.raw.wheelchair
+                }
+            }).sort(sortByDistance);
 
         });
 }
