@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
 import DevPage from './pages/DevPage';
-import "./Api"
 import Results from './pages/Results';
+import Contact from "./pages/Contact";
 
 import './App.css'
 
@@ -18,12 +18,10 @@ const App = () => {
         <Route path="/" element={<Main />} index={true} />
         <Route path="/results" element={<Results />} />
         <Route path="/devpage" element={<DevPage/>} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
 };
 
 export default App;
-
-
-
