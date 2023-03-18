@@ -1,0 +1,109 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate3d(0, 0, 0);
+    /* material acceleration */
+    transform: translateX(-100%);
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 25em;
+        background: black;
+        content: "";
+        transform: skewX(15deg) translateX(-100%);
+        transform-origin: bottom left;
+        will-change: transform;
+        transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+
+        @media (min-width: 40em) {
+            width: 40em;
+        }
+    }
+
+    a {
+        margin: 0.5em 0;
+        padding: 0.2em 2em;
+        font-size: 1.5em;
+        text-decoration: none;
+        font-weight: 500;
+        transform: translateX(-100%);
+        transition: color 0.15s, transform 0.5s;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                transition-delay: 0s,
+                #{100+(50*$i)}ms;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: rgb(214, 181, 34);
+        }
+    }
+}
+
+#menu {}
+
+#menu-trigger:checked {
+    +label {
+        &::before {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .burger {
+
+            &::before,
+            &::after {
+                width: 141.42%;
+            }
+
+            &::before {
+                transform: rotate(45deg) translateY(-50%);
+            }
+
+            &::after {
+                transform: rotate(-45deg) translateY(50%);
+            }
+
+            .bar {
+                transform: scale(0.1);
+            }
+        }
+    }
+
+    ~nav {
+        z-index: 4;
+        transform: translateX(0);
+
+        &::before {
+            transform: skewX(15deg) translateX(0);
+        }
+
+        a {
+            transform: translateX(0);
+        }
+    }
+
+    ~main .content {
+        transform: translateX(3em);
+        transform-origin: left center;
+        filter: blur(2px);
+    }
+}
