@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./styles/LightDarkMode.module.css";
 
 function LightDarkToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -11,7 +12,7 @@ function LightDarkToggle() {
   document.body.classList.toggle("body-dark-mode", isDarkMode);
 
   return (
-    <div className="container mx-auto">
+    <div className={`${styles.toggleArea} flex-1`}>
       <button
         id="light-dark-btn"
         className="btn btn-dark btn-info ml-6 mt-1"

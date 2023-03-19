@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <>
       {/* build the NavBar */}
-      <nav className="p-4 flex items-center fixed top-0 w-full z-10 mx-auto">
+      <nav className="p-4 flex items-center fixed top-0 w-full z-40 mx-auto">
         <div className="flex lg:flex-1 items-center">
           <SlidingLogo />
         </div>

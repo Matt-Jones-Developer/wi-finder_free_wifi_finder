@@ -1,23 +1,21 @@
 // required imports
-import { useState } from "react";
+import { useState, Link} from "react";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
-// should need to import this to style the mobileNav?
-// import mobileNavStyles from "./styles/navBar.scss"
 
-// Define pages as an array of objects with name and link properties
-const pages = [
-  { name: "Main", link: "/" },
-  { name: "Results", link: "/results" },
-  { name: "Dev Team", link: "/team" },
-  { name: "Contact", link: "/contact" },
-];
+// * pages var? Not sure if that's what you wanted
+const pages = {
+  main: '../pages/Main.jsx',
+  results: '../pages/Results.jsx',
+  team: '../pages/DevTeam.jsx',
+  contact: '../pages/Contact.jsx'
+}
 
+// I made it a const function since it was complaining
 const NavMobile = () => {
-  // useState
+                          // useState
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
+  // * undefined 'pages'
   const menus = pages.filter((page) => {
     return page.link !== location.pathname;
   });
@@ -31,7 +29,6 @@ const NavMobile = () => {
         id="menu-trigger"
         role="button"
         title="menu"
-        onChange={() => setIsOpen(!isOpen)} // use onChange instead of onClick for input element
       />
       <label
         htmlFor="menu-trigger"
@@ -46,8 +43,8 @@ const NavMobile = () => {
         </span>
       </label>
       <nav id="menu">
-        {menus.map((menu, index) => (
-          <Link key={index} onClick={() => setIsOpen(!isOpen)} to={menu.link}>
+        {menus.map((menu) => (
+          <Link onClick={() => setIsOpen(!isOpen)} to={menu.link}>
             {menu.name}
           </Link>
         ))}

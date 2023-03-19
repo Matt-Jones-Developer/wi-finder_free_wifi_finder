@@ -1,6 +1,4 @@
 import styles from "./styles/Main.module.css";
-import NavBar from "../components/NavBar";
-// import NavMobile from '../components/NavMobile';
 import Header from "../components/Header";
 import MainCTA from "../components/MainCTA";
 import Hero from "../components/Hero";
@@ -10,8 +8,6 @@ const Main = () => {
 
   return (
     <>
-    <NavBar />
-      {/* <NavMobile /> */}
       <Header />
       {/* main section */}
       <main className={`${styles.main}`}>
@@ -26,7 +22,7 @@ const Main = () => {
             <Hero />
           </div>
         </div>
-        {/* end section */}
+        {/* end main*/}
       </main>
       {/* tray section */}
       <PullOutTray />

@@ -14,7 +14,7 @@ function NavTabs() {
         Home
       </NavLink>
       <NavLink
-        to="search"
+        to="/results"
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
         }
@@ -22,7 +22,7 @@ function NavTabs() {
         Search
       </NavLink>
       <NavLink
-        to="team"
+        to="/devpage"
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
         }
@@ -30,7 +30,7 @@ function NavTabs() {
         Team
       </NavLink>
       <NavLink
-        to="contact"
+        to="/contact"
         end
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink

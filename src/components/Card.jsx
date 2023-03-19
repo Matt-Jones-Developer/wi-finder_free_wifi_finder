@@ -8,13 +8,13 @@ import fiODonnell from "../assets/jpg/fionnuala_odonnell_profile_pic.jpg";
 import mattJones from "../assets/jpg/matt_jones_profile_pic.jpg";
 
 const profileImages = {
-  1: marcHudson,
-  2: fiODonnell,
-  3: kelvinEnaro,
-  4: mattJones
+  0: marcHudson,
+  1: fiODonnell,
+  2: kelvinEnaro,
+  3: mattJones
 }
 
-console.log(profileImages)
+// console.log(profileImages)
 
 function Card(props) {
 
@@ -23,7 +23,7 @@ function Card(props) {
       <div className="flex justify-between">
         <div className="w-3/5 ">
           <h2>{props.name}</h2>
-          <h3 className="mb-6 font-bold text-[#78E15B]" >{props.jobTitle}</h3>
+          <h3 className="mb-6 font-bold text-lime" >{props.jobTitle}</h3>
           <p>{props.about}</p>
           <div className="pt-6 inline-flex">
             <a className="object-contain w-10 h-10 mr-4" href={props.gitHubUrl}>
@@ -41,7 +41,12 @@ function Card(props) {
           </div>
         </div>
         <div className="inline-flex justify-items-end">
-              <img className="object-contain w-28 h-28"src={profileImages[props.index]} alt={props.name}></img>            
+              <img 
+              className="object-contain w-40 h-40"
+              src={profileImages[props.index]} 
+              alt={props.name}
+              >
+              </img>            
             </div>
       </div>
     </div>

@@ -47,6 +47,7 @@ const Map = ({ centreLocation, markers, isLoading, onClick }) => {
           </div>
         )}
         <GoogleMap
+        // should this not be the env var?
           apiKey="AIzaSyBHqhirseGtyYg2Vz51l0srH9MUIqLpCTs"
           defaultCenter={{
             lat: centreLocation?.lat || 51.529831,
