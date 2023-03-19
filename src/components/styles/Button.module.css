@@ -1,12 +1,27 @@
-.btn:hover {
-  background-color: var(--bg-dark);
+.btnCTA {
+  background-color: var(--purps);
+  color: var(--text-light);
+  font-size: 22px;
+}
+
+.btnCTA:hover {
+  background-color: var(--bg-tone);
+  color: var(--text-light);
+  transform: translateY(1px);
+}
+
+.btnAlt {
+  background-color: var(--bg-tone);
   color: var(--text-light);
 }
 
-.btn_lg {
-  background-image: url(../../assets/png/wifi_logo_bo.png);
+.btnAlt:hover {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transform: translateY(1px);
 }
 
-.btn_lg:hover {
-  background-image: url(../../assets/png/wifi_logo_gb.png);
+.btnCTA:active, .btnAlt:active {
+  transform: translateY(3px);
+  box-shadow: 0px 5px rgba(6, 6, 3, 0.3);
 }

@@ -5,26 +5,12 @@ import projectData from "../data/dev_about.json";
 
 
 function CardWrapper() {
-    const projects = projectData.projects;
-
     return (
-          <div >
+          <div className="mt-16">
              {projectData.map((project,i) => < Card index = {i} {...project}/>)}
-        </div>
+          </div>
 
     );
 }
 
-
-/*function CardWrapper(props) {
-    return (
-      <div>
-        {projectData.map (project =>{
-          return <div key={item.id}> <Card{...project}/> </div> 
-        })
-        }
-      </div>
-    );
-  }
-*/
 export default CardWrapper;

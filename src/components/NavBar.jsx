@@ -1,49 +1,50 @@
-export default () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const location = useLocation();
-  const menus = pages.filter((page) => {
-    return page.link !== location.pathname;
-  });
+import React, { useState } from "react";
+import NavTabs from "./NavTabs";
+import SlidingLogo from "./SlidingLogo";
+// import styles from "./styles/NavBar.module.css";
+import "../App.css";
+
+const NavBar = () => {
+  // FOR NEW NAVBAR TOGGLER [TODO]
+  // set toggle init state
+  const [toggle, setToggle] = useState(false);
+  // handle toggles function
+  const handleToggle = () => setToggle(!toggle);
+  // handle side toggle navs onClick
+  // const handleLinkClick = () => {
+  //   setToggle(false);
+  // };
 
   return (
     <>
-      <input
-        type="checkbox"
-        checked={isOpen}
-        className="hide"
-        id="menu-trigger"
-        role="button"
-        title="menu"
-      />
-      <label
-        htmlFor="menu-trigger"
-        aria-hidden="true"
-        title="menu"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="burger">
-          <span className="bar">
-            <span className="visually-hidden">Menu</span>
-          </span>
-        </span>
-      </label>
-      <nav id="menu">
-        {menus.map((menu) => (
-          <Link onClick={() => setIsOpen(!isOpen)} to={menu.link}>
-            {menu.name}
-          </Link>
-        ))}
-        <a href="mailto:marchudson2601@gmail.com">Contact Me 📧</a>
-        <a href="https://github.com/marcahudson26" target="blank">
-          My Github
-        </a>
-        <a
-          href="https://www.linkedin.com/in/marc-hudson-53546a259/"
-          target="blank"
-        >
-          LinkedIn
-        </a>
+      {/* build the NavBar */}
+      <nav className="p-4 flex items-center fixed top-0 w-full z-40 mx-auto">
+        <div className="flex lg:flex-1 items-center">
+          <SlidingLogo />
+        </div>
+        {/* mobile nav toggle nav */}
+        <div className="flex ml-auto pr-4 lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center rounded-md p-2.5 text-dark"
+            onClick={handleToggle}
+          >
+            {/* hamburger divs */}
+            <div className="space-y-2">
+              <div className="w-10 h-1.5 bg-dark"></div>
+              <div className="w-10 h-1.5 bg-dark"></div>
+              <div className="w-10 h-1.5 bg-dark"></div>
+            </div>
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:gap-x-12 nav-items">
+          {/* import NavTabs component */}
+          <NavTabs />
+        </div>
       </nav>
+      {/* mobile toggle nav links [TODO] */}
     </>
   );
 };
+
+export default NavBar;

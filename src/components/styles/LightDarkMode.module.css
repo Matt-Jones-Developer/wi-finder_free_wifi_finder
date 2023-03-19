@@ -1,0 +1,18 @@
+/* .toggle::before {
+  font: var(--fa-font-solid);
+  content: "\f205";
+} */
+
+/* .dark {
+  background-color: var(--background);
+  color: var(--text-light);
+} */
+
+/* .fa-toggle-on {
+  border: 2px solid white;
+  background-color: transparent;
+} */
+
+.toggleArea {
+  max-width: 200px;
+}

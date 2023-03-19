@@ -1,3 +1,4 @@
+
 .locationInputControls {
   display: block;
   margin-bottom: 1rem;
@@ -8,6 +9,7 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
+  color: var(--text-light);
 }
 
 .locationInputControl input {
@@ -20,11 +22,4 @@
   max-width: 100%;
 }
 
-.locationInputAction button {
-  text-align: right;
-}
-
-/* .formDiv {
-  background-color: var(--lime);
-} */
 

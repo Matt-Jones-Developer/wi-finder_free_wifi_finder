@@ -3,6 +3,9 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,18 +19,24 @@ module.exports = {
         "bg-dark-grey": "var(--bg-dark-grey)",
         "purps": "var(--purps)",
         "aqua": "var(--aqua)",
-        "lime": "var(--lumi)",
+        "lime": "var(--lime)",
         "orange": "var(--orange)",
+        "grassy": "var(--grassy)",
         "gradient": "var(--gradient)"
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in forwards",
-        floating: 'floating 3s ease-in-out infinite',
+        floating: 'floating 1s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
+        },
+        floating: {
+          '0%': { transform: 'translate(0, 0px)' },
+          '50%': { transform: 'translate(0, 5px)' },
+          '100%': { transform: 'translate(0, -0px)' },
         }
       },
       variants: {

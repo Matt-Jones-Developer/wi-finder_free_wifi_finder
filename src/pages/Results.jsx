@@ -7,7 +7,7 @@ import getCurrentLocation from "../utils/getCurrentLocation";
 import getWifiLocations from "../utils/getWifiLocations";
 import getPlaceLonLat from "../utils/getPlaceLonLat";
 
-export default () => {
+const Results = () => {
   const [loading, setLoading] = React.useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
   const [currentLocation, setCurrentLocation] = React.useState(null);
@@ -63,7 +63,8 @@ export default () => {
               <a
                 onClick={() => setSelectedLocation(null)}
                 className="close"
-                href="#"
+                // cannot be #
+                href="/"
               >
                 &times;
               </a>
@@ -99,6 +100,7 @@ export default () => {
                 onClick={() => setSelectedLocation(wifiLocation)}
                 className="button"
                 key={wifiLocation.name}
+                href="/"
               >
                 {wifiLocation.name}
               </a>
@@ -109,3 +111,5 @@ export default () => {
     </>
   );
 };
+
+export default Results;
