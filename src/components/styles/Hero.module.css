@@ -1,0 +1,71 @@
+.heroImg {
+  margin-left: 6rem;
+  padding-right: 1rem;
+}
+
+.pin {
+  position: absolute;
+  top: 44vh;
+  right: 19vw;
+}
+
+@media (max-width: 1550px) {
+
+  .heroImg {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1224px) {
+
+  .heroImg {
+    padding-top: 4rem;
+  }
+
+    .pin {
+      top: 45vh;
+      right: 17vw;
+    }
+}
+
+@media (max-width: 900px) {
+  .heroImg {
+    padding-top: 6rem;
+  }
+}
+
+@media (max-width: 855px) {
+
+  .heroImg {
+    margin-left: 0;
+  }
+
+  .pin {
+    top: 404px;
+    right: 180px;
+  }
+}
+
+@media (max-width: 805px) {
+
+  .pin {
+    top: 1044px;
+    right: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .heroImg {
+    margin-top: 2rem;
+  }
+
+  .pin {
+    top: 1074px;
+    right: 180px;
+  }
+}

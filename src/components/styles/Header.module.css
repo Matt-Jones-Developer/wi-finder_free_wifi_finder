@@ -1,0 +1,10 @@
+.tagLine {
+  letter-spacing: .3rem;
+}
+
+@media (max-width: 770px) {
+
+  .header {
+    margin-top: 3rem;
+  }
+}

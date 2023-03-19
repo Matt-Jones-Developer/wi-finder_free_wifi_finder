@@ -1,0 +1,40 @@
+/* NavBar.module.css */
+
+/* .navBarStrip {
+  background-color: var(--light-gray);
+  opacity: 50%;
+} */
+
+.toggleNavList li {
+  margin-top: 2rem;
+}
+
+.nav-items {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav li a {
+  @apply px-4 py-5 text-lg;
+}
+
+nav li a:hover {
+  color: var(--purps);
+}
+
+a:hover {
+  font-weight: 500;
+}
+
+a:last-child {
+  @apply mr-4;
+}
+
+.nameTag {
+  color: var(--purps) !important;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+}

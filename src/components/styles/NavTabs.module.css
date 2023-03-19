@@ -1,0 +1,12 @@
+.navlink {
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: var(--purps);
+}
+
+.active {
+  color: var(--purps);
+  font-weight: bold;
+}

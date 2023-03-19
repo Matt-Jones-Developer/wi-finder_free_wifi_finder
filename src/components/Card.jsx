@@ -1,13 +1,17 @@
 import React from "react";
-import styles from "./styles/Card.module.css";
+// import styles from "./styles/Card.module.css";
 import github_logo from "../assets/png/github-mark-white.png";
 import linkedIn_logo from "../assets/png/LI-In-Bug.png";
-import marcHudson from "../assets/png/Marc_Hudson_ProfilePic.png"
-import fiODonnell from "../assets/jpg/Fionnuala_ODonnell_ProfilePic.jpeg"
+import marcHudson from "../assets/jpg/marc_hudson_profile_pic.jpg"
+import kelvinEnaro from "../assets/jpg/kelvin_enaro_profile_pic.jpg"
+import fiODonnell from "../assets/jpg/fionnuala_odonnell_profile_pic.jpg";
+import mattJones from "../assets/jpg/matt_jones_profile_pic.jpg";
 
 const profileImages = {
   1: marcHudson,
   2: fiODonnell,
+  3: kelvinEnaro,
+  4: mattJones
 }
 
 console.log(profileImages)

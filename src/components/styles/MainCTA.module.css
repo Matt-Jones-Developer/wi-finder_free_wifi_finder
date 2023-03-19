@@ -1,0 +1,31 @@
+.mainTextHide {
+  font-size: 61px;
+}
+
+
+@media (max-width: 1324px) {
+
+  .mainTextHide {
+    font-size: 40px;
+  }
+
+  .miniTag {
+    font-size: 18px;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .logoLg {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .logoLg {
+    margin-top: 0;
+  }
+}

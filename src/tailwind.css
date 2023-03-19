@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* cannot seem to fix this
+adding them in a tailwind.css file had initially 
+fixed the 'unknown' issue ?! but it's back again lol */
