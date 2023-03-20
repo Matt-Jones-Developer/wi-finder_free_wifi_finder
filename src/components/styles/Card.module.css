@@ -1,36 +1,29 @@
-.card{
-  max-height: 20%;
+ .cardHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ }
+ 
+ .card{
+  max-width: 75%;
   width: 70%;
- /* background-color:var(--bg-dark);*/
-  margin:5%;
-  padding:5%
-}
-
-
-.profileName{
-
-
-}
-
-.jobTitle{
-
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right:5%;
+  border-bottom: 20px;
+  border-style: solid;
+  border-color: var(--purps);
 }
 
 .profilePic{
-border-color: var(--dark);
-border-right-width: 0.5px;
-border-bottom-width: 0.5px;
+border-color: var(--bg-dark);
+border-right-width: 2px;
+border-bottom-width: 2px;
 }
 
-.gitHub{
-
-}
-
-.linkedIn{
-}
 
 @media (max-width: 1550px) {
-
 
 }
 
@@ -39,26 +32,17 @@ border-bottom-width: 0.5px;
 }
 
 @media (max-width: 900px) {
-  
-  
+   
 }
 
 @media (max-width: 855px) {
 
-  
-}
+ }
 
 @media (max-width: 805px) {
 
-  .jobTitle{
-    
-  }
-}
+ }
 
 @media (max-width: 640px) {
 
-
-  .jobTitle{
-    
-  }
 }

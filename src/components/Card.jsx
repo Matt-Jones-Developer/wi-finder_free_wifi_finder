@@ -15,42 +15,43 @@ const profileImages = {
 }
 
 
-
 function Card(props) {
 
   return (
-    <div className="bg-[#292C33] bg-opacity-75 m-4 p-6 rounded">
-      <div className="flex justify-between">
-        <div className="w-3/5 ">
-          <h2 className="leading-10 pb-6">{props.name}</h2>
-          <h3 className={`${styles.jobTile} leading-10 mb-6 font-bold text-lime`} >{props.jobTitle}</h3>
-          <p>{props.about}</p>
-          <div className="py-5 inline-flex">
-            <a className={`${styles.gitHub} object-contain w-10 h-10 mr-4`} href={props.gitHubUrl}>
-              <img
-                src={github_logo}
-                alt="GitHub Logo"
-              />
-            </a>
-            <a className={`${styles.linkedIn} object-contain w-12 h-12`} href={props.linkedInUrl}>
-              <img
-                src={linkedIn_logo}
-                alt="Linkedin Logo"
-              />
-            </a>
-          </div>
-        </div>
-       
-        <div className="inline-flex justify-items-end drop-shadow-2xl">
-              <img 
-              className={`${styles.profilePic} bg-contain bg-top h-40 w-40 grayscale rounded border-b-1`}
-              src={profileImages[props.index]} 
-              alt={props.name}
-              >
-              </img>          
+    <div className={`${styles.cardHolder}`}>
+      <div className={`${styles.card} m-4 p-6 rounded`}>
+        <div className="flex justify-between">
+          <div className="w-8/12 ">
+            <h2 className="leading-10 pb-6">{props.name}</h2>
+            <h3 className={`${styles.jobTile} leading-10 mb-6 font-bold text-lime`} >{props.jobTitle}</h3>
+            <p>{props.about}</p>
+            <div className="py-5 inline-flex">
+              <a className={`${styles.gitHub} object-contain w-10 h-10 mr-4`} href={props.gitHubUrl}>
+                <img
+                  src={github_logo}
+                  alt="GitHub Logo"
+                />
+              </a>
+              <a className={`${styles.linkedIn} object-contain w-12 h-12`} href={props.linkedInUrl}>
+                <img
+                  src={linkedIn_logo}
+                  alt="Linkedin Logo"
+                />
+              </a>
             </div>
+          </div>
+
+          <div className="inline-flex justify-items-end drop-shadow-2xl ml-5">
+            <img
+              className={`${styles.profilePic} bg-contain bg-top h-52 w-52 grayscale rounded border-b-1`}
+              src={profileImages[props.index]}
+              alt={props.name}
+            >
+            </img>
+          </div>
+
+        </div>
       </div>
-      <hr className ="border-purps border-4 rounded-lg"></hr>
     </div>
   );
 }
