@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <>
       {/* build the NavBar */}
-      <nav className="p-4 flex items-center fixed top-0 w-full z-40 mx-auto">
+      <nav className="p-5 flex items-center sticky top-0 w-full z-40 mx-auto">
         <div className="flex lg:flex-1 items-center">
           <SlidingLogo />
         </div>
@@ -37,7 +37,7 @@ const NavBar = () => {
             </div>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12 nav-items">
+        <div className="z-10 hidden lg:flex lg:gap-x-12 nav-items">
           {/* import NavTabs component */}
           <NavTabs />
         </div>

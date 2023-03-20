@@ -1,15 +1,17 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
+
 import Map from "../components/Map.jsx";
-import "./styles/Results.scss";
+import Button from "../components/Button.jsx";
 
 import getCurrentLocation from "../utils/getCurrentLocation";
 import getWifiLocations from "../utils/getWifiLocations";
 import getPlaceLonLat from "../utils/getPlaceLonLat";
+import "./styles/Results.scss";
 
 const Results = () => {
   const [loading, setLoading] = React.useState(true);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [currentLocation, setCurrentLocation] = React.useState(null);
   const [wifiLocations, setWifiLocations] = React.useState([]);
   const [selectedLocation, setSelectedLocation] = React.useState(null);
@@ -43,7 +45,7 @@ const Results = () => {
       setLoading(false);
     }
     init();
-  }, []);
+  }, [categories, location, range]);
 
   return (
     <>
@@ -60,14 +62,12 @@ const Results = () => {
             <div className="popup">
               <h2>Known info</h2>
               <h2 key={selectedLocation.name}>{selectedLocation.name}</h2>
-              <a
+              <button
                 onClick={() => setSelectedLocation(null)}
                 className="close"
-                // cannot be #
-                href="/"
               >
                 &times;
-              </a>
+              </button>
               <div className="content">
                 <p key={selectedLocation.fullAddress}>
                   Address: {selectedLocation.fullAddress}
@@ -92,22 +92,18 @@ const Results = () => {
           </div>
         </div>
       )}
-      {wifiLocations.map((wifiLocation) => {
-        return (
-          <div>
-            <div className="box">
-              <a
-                onClick={() => setSelectedLocation(wifiLocation)}
-                className="button"
-                key={wifiLocation.name}
-                href="/"
-              >
-                {wifiLocation.name}
-              </a>
-            </div>
-          </div>
-        );
-      })}
+      <div className="box">
+        {wifiLocations.map((wifiLocation) => {
+          return (
+            <Button
+              onClick={() => setSelectedLocation(wifiLocation)}
+              key={wifiLocation.name}
+            >
+              {wifiLocation.name}
+            </Button>
+          );
+        })}
+      </div>
     </>
   );
 };

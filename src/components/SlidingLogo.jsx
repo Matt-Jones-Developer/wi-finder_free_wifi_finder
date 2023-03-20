@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useHref } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LightDarkToggle from "./LightDarkToggle";
 import wifiIcon from "../assets/png/wifinder_icon_trs.png";
 import tw from "tailwind-styled-components";
@@ -17,8 +17,6 @@ const SlideOutDiv = tw.div`
 `;
 
 function SlidingLogo() {
-  // init useHistory
-  const href = useHref();
   // set shelf state
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,12 +37,6 @@ function SlidingLogo() {
               className="h-12 pl-4 pr-6"
               src={`${wifiIcon}`}
               alt="coder icon"
-              // force refresh
-              onClick={() => {
-                window.location.reload();
-                // fix the 404 useHref
-                window.location.href = href;
-              }}
             />
           </Link>
           {/* wifinder.com */}

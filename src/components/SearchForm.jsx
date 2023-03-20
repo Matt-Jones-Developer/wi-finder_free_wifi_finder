@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles/SearchForm.module.css";
 import btnStyles from "./styles/Button.module.css";
 
 const SearchForm = () => {
+  const navigate = useNavigate();
   // reveal form effect
   // get current state, set state
   const [revealed, setRevealed] = useState(false);
   // handle y scroll
   useEffect(() => {
     function handleScroll() {
-        // if user scrolls (reveal)
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-          setRevealed(true);
-        } else {
-          setRevealed(false);
-        }
+      // if user scrolls (reveal)
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        setRevealed(true);
+      } else {
+        setRevealed(false);
       }
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -43,12 +45,12 @@ const SearchForm = () => {
       location: enteredLocation,
       range: enteredRange,
     };
-    // clear form
-    console.log(locationData);
-    // reset value to "" using 2-way binding
-    setEnteredLocation("");
-    setEnteredRange("");
+
+    const queryString = new URLSearchParams(locationData);
+    navigate(`/results?${queryString}`);
   };
+
+  const handleRefineClick = () => {};
 
   return (
     // Input form flex container
@@ -98,9 +100,9 @@ const SearchForm = () => {
           </button>
           {/* refine search options btn */}
           <button
+            onClick={handleRefineClick}
             className={`${btnStyles.btnAlt} 
             rounded-full py-2 px-4`}
-            type="submit"
           >
             Refine Search
           </button>

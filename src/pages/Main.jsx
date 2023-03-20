@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./styles/Main.module.css";
 import Header from "../components/Header";
 import MainCTA from "../components/MainCTA";
@@ -5,7 +6,8 @@ import Hero from "../components/Hero";
 import PullOutTray from "../components/PullOutTray";
 
 const Main = () => {
-
+  const navigate = useNavigate();
+  const handleSearchClick = () => navigate("/results");
   return (
     <>
       <Header />
@@ -18,7 +20,7 @@ const Main = () => {
         >
           {/* 2 col CTA + Hero modules container */}
           <div className="grid md:grid-cols-2 gap-2 mx-auto">
-            <MainCTA />
+            <MainCTA onClick={handleSearchClick} />
             <Hero />
           </div>
         </div>

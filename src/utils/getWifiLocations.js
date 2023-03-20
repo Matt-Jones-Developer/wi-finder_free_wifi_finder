@@ -1,3 +1,5 @@
+import searchCategories from "../constants/searchCategories";
+
 function calculateDistance(source, target) {
     return Math.acos(Math.sin(source.lat) * Math.sin(target.lat) + Math.cos(source.lat) * Math.cos(target.lat) * Math.cos(target.lon - source.lon)) * 6371
 }
@@ -12,40 +14,10 @@ function sortByDistance(a, b) {
     return 0;
 }
 
-const categoryMap = {
-    leisure: [
-        "leisure",
-        "building.spa",
-        "entertainment",
-        "national_park",
-        "beach.beach_resort",
-    ],
-    library: [
-        "education.library",
-    ],
-    museums: [
-        "entertainment.museum",
-    ],
-    hotels: [
-        "accommodation",
-    ],
-    transport: [
-        "commercial.gas",
-        "public_transport",
-        "building.transportation",
-    ],
-    restaurants: [
-        "catering",
-    ],
-    retail: [
-        "commercial.supermarket",
-        "commercial.shopping_mall",
-        "tourism.information"
-    ]
-}
+const defaultCategory = searchCategories.map((s) => s.value)
+export default function getWifiLocations(lon, lat, range = 8000, categories = defaultCategory) {
 
-export default function getWifiLocations(lon, lat, range = 8000, categories = Object.keys(categoryMap)) {
-    const searchCategories = categories.flatMap(category => categoryMap[category])
+    const placeCategories = categories.flatMap(category => searchCategories.find((s) => s.value === category).categories)
 
     const conditions = [
         "internet_access.free"
@@ -53,7 +25,7 @@ export default function getWifiLocations(lon, lat, range = 8000, categories = Ob
 
     const queryString = new URLSearchParams({
         conditions: conditions.join(","),
-        categories: searchCategories.join(","),
+        categories: placeCategories.join(","),
         filter: `circle:${lon},${lat},${range}`,
         limit: 10,
         apiKey: process.env.REACT_APP_PLACES_API_KEY,
