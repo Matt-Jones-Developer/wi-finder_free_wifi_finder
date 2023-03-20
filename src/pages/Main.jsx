@@ -1,4 +1,5 @@
 import styles from "./styles/Main.module.css";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainCTA from "../components/MainCTA";
 import Hero from "../components/Hero";
@@ -26,6 +27,8 @@ const Main = () => {
       </main>
       {/* tray section */}
       <PullOutTray />
+      <Footer />
+      
     </>
   );
 };
