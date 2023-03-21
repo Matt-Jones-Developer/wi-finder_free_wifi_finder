@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./styles/Card.module.css";
-import github_logo from "../assets/png/github-mark-white.png";
-import linkedIn_logo from "../assets/png/Li-In-White.png";
+import github_logo_dark from "../assets/png/github-mark-white.png";
+import linkedIn_logo_dark from "../assets/png/Li-In-White.png";
+import github_logo_light from "../assets/png/github-mark.png";
+import linkedIn_logo_light from "../assets/png/LI-In-Bug"
 import marcHudson from "../assets/jpg/marc_hudson_profile_pic.jpg"
 import kelvinEnaro from "../assets/jpg/kelvin_enaro_profile_pic.jpg"
 import fiODonnell from "../assets/jpg/fionnuala_odonnell_profile_pic.jpg";
@@ -34,13 +36,13 @@ function Card(props) {
           <div className="py-5 inline-flex">
             <a className={`${styles.gitHub} object-contain w-10 h-10 mr-4`} href={props.gitHubUrl}>
               <img
-                src={github_logo}
+                src={github_logo_light}
                 alt="GitHub Logo"
               />
             </a>
             <a className={`${styles.linkedIn} object-contain w-12 h-12`} href={props.linkedInUrl}>
               <img
-                src={linkedIn_logo}
+                src={linkedIn_logo_light}
                 alt="Linkedin Logo"
               />
             </a>
