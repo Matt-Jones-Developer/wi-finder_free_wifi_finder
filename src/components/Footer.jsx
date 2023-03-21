@@ -1,6 +1,7 @@
 import wifiIcon from "../assets/png/wifinder_icon_trs_white.png";
 import styles from './styles/Footer.module.css';
 import emailIcon from "../assets/png/email_icon_white.png";
+import "../App.css";
 
 const Footer = () => {
     return (
