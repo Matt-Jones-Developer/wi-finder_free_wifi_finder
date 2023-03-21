@@ -1,4 +1,4 @@
-.footer{
+/*.footer{
     background-color:var(--purps);
 }
 
@@ -13,6 +13,11 @@
 .pageLinks:hover{
   color: var(--text-light) !important;
   text-decoration: underline var(--text-light);
+}*/
+
+
+.navLink{
+  
 }
 
 @media (min-width: 768px) {
