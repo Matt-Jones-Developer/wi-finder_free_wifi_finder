@@ -3,7 +3,7 @@ import styles from "./styles/Card.module.css";
 import github_logo_dark from "../assets/png/github-mark-white.png";
 import linkedIn_logo_dark from "../assets/png/Li-In-White.png";
 import github_logo_light from "../assets/png/github-mark.png";
-import linkedIn_logo_light from "../assets/png/LI-In-Bug"
+import linkedIn_logo_light from "../assets/png/LI-In-Bug.png"
 import marcHudson from "../assets/jpg/marc_hudson_profile_pic.jpg"
 import kelvinEnaro from "../assets/jpg/kelvin_enaro_profile_pic.jpg"
 import fiODonnell from "../assets/jpg/fionnuala_odonnell_profile_pic.jpg";

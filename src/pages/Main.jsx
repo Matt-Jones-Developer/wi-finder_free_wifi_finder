@@ -29,7 +29,6 @@ const Main = () => {
       </main>
       {/* tray section */}
       <PullOutTray />
-      <Footer />
       
     </>
   );

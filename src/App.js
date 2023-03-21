@@ -5,6 +5,7 @@ import Main from './pages/Main';
 import DevPage from './pages/DevPage';
 import Results from './pages/Results';
 import Contact from "./pages/Contact";
+import Footer from './components/Footer';
 
 import './App.css'
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/devpage" element={<DevPage/>} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
