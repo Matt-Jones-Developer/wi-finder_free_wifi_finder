@@ -23,9 +23,29 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
 
   .logoLg {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 414px) {
+
+  .mainTextHide {
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .logoLg {
+    margin-top: -2rem;
+  }
+
+  .mainTextHide {
+    font-size: 26px;
+    margin-bottom: 1rem;
   }
 }
