@@ -1,9 +1,18 @@
 .footer{
-    background-color: var(--purps);
+    background-color:var(--purps);
 }
 
-.nameTag{
-  color:white
+.wifinderTextLock{
+  color:var(--text-light);
+}
+
+.pageLinks{
+  color:var(--text-light);
+}
+
+.pageLinks:hover{
+  color: var(--text-light) !important;
+  text-decoration: underline var(--text-light);
 }
 
 @media (min-width: 768px) {
