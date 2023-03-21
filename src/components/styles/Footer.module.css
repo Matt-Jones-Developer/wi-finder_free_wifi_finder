@@ -1,0 +1,13 @@
+.footer{
+    background-color: var(--purps);
+}
+
+.nameTag{
+  color:white
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+      display: block;
+    }
+  }
