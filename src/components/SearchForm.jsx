@@ -99,13 +99,13 @@ const SearchForm = () => {
             Add Location
           </button>
           {/* refine search options btn */}
-          <button
+          {/* <button
             onClick={handleRefineClick}
             className={`${btnStyles.btnAlt} 
             rounded-full py-2 px-4`}
           >
             Refine Search
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

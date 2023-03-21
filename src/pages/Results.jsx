@@ -1,6 +1,8 @@
 import React from "react";
+import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-
+import Header from "../components/Header.jsx";
+import SearchSettingsBar from "../components/SearchSettingsBar.jsx";
 import Map from "../components/Map.jsx";
 import Button from "../components/Button.jsx";
 
@@ -10,6 +12,15 @@ import getPlaceLonLat from "../utils/getPlaceLonLat";
 import "./styles/Results.scss";
 
 const Results = () => {
+  // always auto scroll hook
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const [loading, setLoading] = React.useState(true);
   const [searchParams] = useSearchParams();
   const [currentLocation, setCurrentLocation] = React.useState(null);
@@ -49,60 +60,64 @@ const Results = () => {
 
   return (
     <>
-      <Map
-        key={`maps-${loading}`}
-        centreLocation={currentLocation}
-        markers={wifiLocations}
-        isLoading={loading}
-        onClick={handleMarkerClick}
-      />
-      {!!selectedLocation && (
-        <div>
-          <div id="popup1" className="overlay">
-            <div className="popup">
-              <h2>Known info</h2>
-              <h2 key={selectedLocation.name}>{selectedLocation.name}</h2>
-              <button
-                onClick={() => setSelectedLocation(null)}
-                className="close"
-              >
-                &times;
-              </button>
-              <div className="content">
-                <p key={selectedLocation.fullAddress}>
-                  Address: {selectedLocation.fullAddress}
-                </p>
-                <a
-                  key={selectedLocation.website}
-                  href={selectedLocation.website}
+      <Header />
+      <SearchSettingsBar />
+      <div className={`mt-0`}>
+        <Map
+          key={`maps-${loading}`}
+          centreLocation={currentLocation}
+          markers={wifiLocations}
+          isLoading={loading}
+          onClick={handleMarkerClick}
+        />
+        {!!selectedLocation && (
+          <div>
+            <div id="popup1" className="overlay">
+              <div className="popup">
+                <h2>Known info</h2>
+                <h2 key={selectedLocation.name}>{selectedLocation.name}</h2>
+                <button
+                  onClick={() => setSelectedLocation(null)}
+                  className="close"
                 >
-                  website: {selectedLocation.website}
-                </a>
-                <p key={selectedLocation.openingHours}>
-                  Opening Hours: {selectedLocation.openingHours}
-                </p>
-                <p key={selectedLocation.contactNumbers}>
-                  Contact Number:{selectedLocation.contactNumbers}
-                </p>
-                <p key={selectedLocation.wheelChair}>
-                  wheelChair Safe:{selectedLocation.wheelChair}
-                </p>
+                  &times;
+                </button>
+                <div className="content">
+                  <p key={selectedLocation.fullAddress}>
+                    Address: {selectedLocation.fullAddress}
+                  </p>
+                  <a
+                    key={selectedLocation.website}
+                    href={selectedLocation.website}
+                  >
+                    website: {selectedLocation.website}
+                  </a>
+                  <p key={selectedLocation.openingHours}>
+                    Opening Hours: {selectedLocation.openingHours}
+                  </p>
+                  <p key={selectedLocation.contactNumbers}>
+                    Contact Number:{selectedLocation.contactNumbers}
+                  </p>
+                  <p key={selectedLocation.wheelChair}>
+                    wheelChair Safe:{selectedLocation.wheelChair}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+        )}
+        <div className="box">
+          {wifiLocations.map((wifiLocation) => {
+            return (
+              <Button
+                onClick={() => setSelectedLocation(wifiLocation)}
+                key={wifiLocation.name}
+              >
+                {wifiLocation.name}
+              </Button>
+            );
+          })}
         </div>
-      )}
-      <div className="box">
-        {wifiLocations.map((wifiLocation) => {
-          return (
-            <Button
-              onClick={() => setSelectedLocation(wifiLocation)}
-              key={wifiLocation.name}
-            >
-              {wifiLocation.name}
-            </Button>
-          );
-        })}
       </div>
     </>
   );

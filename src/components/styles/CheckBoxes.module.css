@@ -1,0 +1,21 @@
+/* .checkboxes {
+  width: 500px;
+} */
+
+@media (max-width: 1024px) {
+  .checkboxes {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .checkboxes {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .checkboxes {
+    margin-left: 1rem;
+  }
+}

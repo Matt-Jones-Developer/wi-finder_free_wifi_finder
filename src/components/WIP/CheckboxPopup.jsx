@@ -1,7 +1,8 @@
 import { useState } from "react";
-import styles from "./styles/CheckBoxes.module.css";
+import styles from "./styles/CheckboxPopup.module.css";
 
-const CheckBoxes = () => {
+
+const CheckboxPopup = ({ showPopup }) => {
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
   // define the checkboxes
@@ -14,6 +15,7 @@ const CheckBoxes = () => {
     { label: "Bars", value: "Bars" },
     { label: "Cafes", value: "Cafes" },
     { label: "Transport", value: "Transport" },
+    { label: "Airports", value: "Airports" },
   ];
 
   // onClick handler
@@ -28,15 +30,15 @@ const CheckBoxes = () => {
   };
 
   return (
-    <div className={`${styles.checkboxes} grid grid-cols-2 md:grid-cols-4 gap-2 
-      justify-center p-2 text-white ml-16 mt-0`}>
+    <div
+      className={`${styles.popup} ${showPopup ? styles.showPopup : ""}
+      popup grid md:grid-cols-3 gap-1 p-8 mx-auto" 
+      ${showPopup ? "" : "hidden"}`}
+    >
       {checkBoxes.map((checkbox, index) => (
-        <label
-          className="block w-full flex items-center mr-8 min-w-0"
-          key={index}
-        >
+        <label className="block mb-4" key={index}>
           <input
-            className="mr-4 inline-block w-4 h-4"
+            className="mr-4"
             type="checkbox"
             value={checkbox.value}
             checked={selectedCheckboxes.includes(checkbox.value)}
@@ -45,8 +47,12 @@ const CheckBoxes = () => {
           {checkbox.label}
         </label>
       ))}
+      {/* <button 
+      className="closePopup btn"
+      type="button"
+      >done</button> */}
     </div>
   );
 };
 
-export default CheckBoxes;
+export default CheckboxPopup;
