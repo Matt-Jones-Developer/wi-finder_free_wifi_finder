@@ -1,0 +1,12 @@
+.border{
+    background-color: var(--purps);
+}
+
+.highlight{
+    color: var(--purps);
+
+}
+
+h4{
+    margin-top: 1%;
+}

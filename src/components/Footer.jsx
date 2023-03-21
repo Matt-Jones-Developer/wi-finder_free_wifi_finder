@@ -32,12 +32,12 @@ const Footer = () => {
                         </li>
                         <li className ="pr-6">
                             <NavLink
-                                to="/terms&conditions"
+                                to="/termsofuse"
                                 className={({ isActive }) =>
                                     isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
                                 }
                             >
-                                Terms & Conditions
+                                Terms of Use
                             </NavLink>
 
                         </li>
