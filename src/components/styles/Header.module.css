@@ -8,3 +8,60 @@
     margin-top: 3rem;
   }
 }
+
+@media (max-width: 500px) {
+
+  .tagLine {
+    letter-spacing: 0.2rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 414px) {
+
+  h1 {
+    font-size: 87px;
+  }
+
+  h2 {
+    font-size: 44px;
+  }
+
+  .tagLine {
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  h1 {
+    font-size: 84px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .tagLine {
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 30px;
+    padding-top: 1rem;
+  }
+
+  .tagLine {
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+}

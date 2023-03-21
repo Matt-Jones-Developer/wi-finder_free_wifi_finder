@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import CheckBoxes from "./Checkboxes";
 import SearchForm from "./SearchForm";
 import styles from "./styles/PullOutTray.module.css";
 import freeWifi from "../assets/png/wifi_bnw_logo.png";
@@ -54,8 +53,6 @@ const PullOutTray = () => {
           </div>
           {/* Input Form */}
           <SearchForm />
-          {/* <CheckBoxes /> */}
-          <CheckBoxes />
         </div>
       </section>
     </>

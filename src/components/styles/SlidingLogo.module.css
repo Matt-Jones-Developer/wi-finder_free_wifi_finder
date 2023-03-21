@@ -1,0 +1,21 @@
+.slidingBrand {
+  /* position: relative; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 40vw;
+}
+
+.logo {
+  z-index: 99;
+}
+
+@media (max-width: 1024px) {
+
+  .slidingBrand {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+}

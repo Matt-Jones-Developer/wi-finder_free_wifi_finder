@@ -22,10 +22,10 @@
     padding-top: 4rem;
   }
 
-    .pin {
-      top: 45vh;
-      right: 17vw;
-    }
+  .pin {
+    top: 30vh;
+    right: 17vw;
+  }
 }
 
 @media (max-width: 900px) {
@@ -49,8 +49,16 @@
 @media (max-width: 805px) {
 
   .pin {
-    top: 1044px;
-    right: 280px;
+    top: 444px;
+    right: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pin {
+    top: 1144px;
+    right: 295px;
   }
 }
 
@@ -67,5 +75,36 @@
   .pin {
     top: 1074px;
     right: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroImg {
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 414px) {
+
+  .heroImg {
+    margin-top: -1rem;
+  }
+
+  .pin {
+    top: 954px;
+    right: 150px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .heroImg {
+    margin-top: -3rem;
+  }
+
+  .pin {
+    top: 874px;
+    right: 160px;
   }
 }
