@@ -7,7 +7,8 @@ const DevPage = () => {
   console.log("test")
   console.log(projectData)
   return(
-<div>
+    
+<div className='pt-5'>
   <CardWrapper data={projectData}/>
 </div>
   )
