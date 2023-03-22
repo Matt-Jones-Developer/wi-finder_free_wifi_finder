@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import Header from "../components/Header.jsx";
 import SearchSettingsBar from "../components/SearchSettingsBar";
 import Map from "../components/Map.jsx";
 import Button from "../components/Button.jsx";
@@ -35,38 +34,46 @@ const Results = () => {
     setSelectedLocation(location);
   };
 
-  const handleSearch = async (
-    locationData = { location, range, categories }
-  ) => {
-    setLoading(true);
-    const wifiCategories =
-      locationData.categories?.length > 0
-        ? locationData.categories
-        : searchCategories.map((s) => s.value);
+  const handleSearch = React.useCallback(
+    async (locationData = { location, range, categories }) => {
+      setLoading(true);
+      const wifiCategories =
+        locationData.categories?.length > 0
+          ? locationData.categories
+          : searchCategories.map((s) => s.value);
 
-    if (locationData.location) {
-      const { lon, lat } = await getPlaceLonLat(locationData.location);
-      const locations = await getWifiLocations(
-        lon,
-        lat,
-        locationData.range,
-        wifiCategories
-      );
-      setWifiLocations(locations);
-      setCurrentLocation({ lat, lon });
-    } else {
-      const currentLocation = await getCurrentLocation();
-      const wifiLocations = await getWifiLocations(
-        currentLocation.lon,
-        currentLocation.lat,
-        locationData.range,
-        wifiCategories
-      );
-      setCurrentLocation(currentLocation);
-      setWifiLocations(wifiLocations);
-    }
-    setLoading(false);
-  };
+      if (locationData.location) {
+        const { lon, lat } = await getPlaceLonLat(locationData.location);
+        const locations = await getWifiLocations(
+          lon,
+          lat,
+          locationData.range,
+          wifiCategories
+        );
+        setWifiLocations(locations);
+        setCurrentLocation({ lat, lon });
+
+        const queryString = new URLSearchParams({
+          location: locationData.location,
+          range: locationData.range,
+          categories: wifiCategories.join(","),
+        }).toString();
+        window.history.replaceState(null, null, `/results?${queryString}`);
+      } else {
+        const currentLocation = await getCurrentLocation();
+        const wifiLocations = await getWifiLocations(
+          currentLocation.lon,
+          currentLocation.lat,
+          locationData.range,
+          wifiCategories
+        );
+        setCurrentLocation(currentLocation);
+        setWifiLocations(wifiLocations);
+      }
+      setLoading(false);
+    },
+    [categories, location, range]
+  );
 
   React.useEffect(() => {
     const init = async () => {
@@ -77,7 +84,7 @@ const Results = () => {
       init();
       setInitiatedMap(true);
     }
-  }, [initiatedMap, categories, range]);
+  }, [handleSearch, initiatedMap, categories, range]);
 
   return (
     <>
