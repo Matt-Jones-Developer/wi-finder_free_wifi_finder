@@ -2,8 +2,6 @@ import React from "react";
 import Card from "../components/Card";
 import projectData from "../data/dev_about.json";
 
-
-
 function CardWrapper() {
     return (
           <div className="mt-16">

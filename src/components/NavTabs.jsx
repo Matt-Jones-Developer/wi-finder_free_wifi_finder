@@ -22,7 +22,7 @@ function NavTabs() {
         Search
       </NavLink>
       <NavLink
-        to="/devpage"
+        to="/devteam"
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
         }

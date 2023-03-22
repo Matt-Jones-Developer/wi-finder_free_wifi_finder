@@ -45,13 +45,24 @@ body {
   line-height: 1.5;
 }
 
+/* dark mode switches */
+
 .body-dark-mode {
   color: var(--text-light);
   background-color: var(--background);
 }
 
+/* map */
 .body-dark-mode .google-map [role=region] > :first-child {
   filter: invert(90%) hue-rotate(161deg) saturate(0.5);
+}
+/* icons */
+.object-contain {
+  filter: invert(1)
+}
+
+.body-dark-mode .object-contain {
+  filter: invert(0);
 }
 
 h1 {
