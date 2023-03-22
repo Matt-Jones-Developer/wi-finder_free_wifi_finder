@@ -5,45 +5,53 @@ import termsofuse from "../assets/pdf/wifinder_terms_of_use.pdf"
 
 const Footer = () => {
     return (
-
-<footer className={`${styles.footer}`}>
-    <div className="w-full ml-3 md:px-6 py-4">
-        <div className="sm:flex sm:items-center sm:justify-between">
-            <a href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder" className="flex items-center mb-4 sm:mb-0">
-                <img className="h-12 pr-6 "
-                        src={`${wifiIcon}`}
-                        alt="coder icon">
-                    </img>
-                <span className="self-center text-2xl font-semibold whitespace-nowrap">WiFinder.com</span>
+      <footer className={`${styles.footer}`}>
+        <div className="w-full ml-3 md:px-6 py-4">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <a
+              href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder"
+              className="flex items-center mb-4 sm:mb-0"
+            >
+              <img
+                className="h-12 pr-6 "
+                src={`${wifiIcon}`}
+                alt="coder icon"
+              ></img>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap">
+                WiFinder.com
+              </span>
             </a>
             <ul className="flex items-center mb-6 text-sm sm:mb-0">
-                <li>
-                    <a href="/" className="mr-4 hover:underline md:mr-6 ">About</a>
-                </li>
-                <li>
-                    <a href={`${termsofuse}`} target="_blank" className="mr-4 hover:underline md:mr-6 ">Terms of use</a>
-                </li>
-                <li>
-                    <a href="/contact" >
-                        <img className="h-8 pr-6 "
-                        src={`${emailIcon}`}
-                        alt="email icon"></img>
-                    </a>
-                </li>
+              <li>
+                <a href="/" className="mr-4 hover:underline md:mr-6 ">
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`${termsofuse}`}
+                  target="_blank"
+                  className="mr-4 hover:underline md:mr-6 "
+                  rel="noreferrer"
+                >
+                  Terms of use
+                </a>
+              </li>
+              <li>
+                <a href="/contact">
+                  <img
+                    className="h-8 pr-6 "
+                    src={`${emailIcon}`}
+                    alt="email icon"
+                  ></img>
+                </a>
+              </li>
             </ul>
+          </div>
         </div>
-    </div>
-</footer>
+      </footer>
 
-
-
-
-
-
-
-
-
-/*
+      /*
         <div>
             <div classNameName={`${styles.footer} gap-8 columns-3 pl-4 pb-20 pt10`}>
                 <div classNameName= "w-full">
@@ -66,7 +74,7 @@ const Footer = () => {
                 </div>
             </div>
         </div> */
-    )
+    );
 
 }
 
