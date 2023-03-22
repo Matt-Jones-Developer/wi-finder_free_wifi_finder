@@ -58,24 +58,46 @@ const Form = () => {
           <form action="index.html" autoComplete="off">
             <h3 className="title">Contact us</h3>
             <div className="input-container">
-              <input type="text" name="name" className="input" />
               <label to="input-container">Username</label>
-              <span>Username</span>
+              <input
+                type="text"
+                name="name"
+                className="input"
+                placeholder="Enter your name"
+              />
+
+              {/* <span>Username</span> */}
             </div>
             <div className="input-container">
-              <input type="email" name="email" className="input" />
               <label to="input-container">Email</label>
-              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                className="input"
+                placeholder="Enter your email"
+              />
+
+              {/* <span>Email</span> */}
             </div>
             <div className="input-container">
-              <input type="tel" name="phone" className="input" />
               <label tfo="input-container">Phone</label>
-              <span>Phone</span>
+              <input
+                type="tel"
+                name="phone"
+                className="input"
+                placeholder="Enter your phone number"
+              />
+
+              {/* <span>Phone</span> */}
             </div>
             <div className="input-container textarea">
-              <textarea name="message" className="input"></textarea>
               <label to="input-container">Message</label>
-              <span>Message</span>
+              <textarea
+                name="message"
+                className="input"
+                placeholder="Send us a message!"
+              ></textarea>
+              {/* <span>Message</span> */}
             </div>
             <input type="submit" value="Send" className="btnForm" />
           </form>

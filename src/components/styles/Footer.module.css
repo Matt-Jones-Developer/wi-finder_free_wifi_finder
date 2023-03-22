@@ -1,13 +1,7 @@
 .footer{
-    background-color: var(--purps);
+    max-height: 200px;
 }
 
-.nameTag{
-  color:white
+.footer span {
+  font-size: 22px;
 }
-
-@media (min-width: 768px) {
-    .mobile-nav {
-      display: block;
-    }
-  }

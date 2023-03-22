@@ -5,8 +5,8 @@
 
 .pin {
   position: absolute;
-  top: 44vh;
-  right: 19vw;
+  top: 52vh;
+  right: 17vw;
 }
 
 @media (max-width: 1550px) {
@@ -23,8 +23,15 @@
   }
 
   .pin {
-    top: 30vh;
+
     right: 17vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pin {
+    top: 494px;
+    right: 160px;
   }
 }
 
@@ -41,8 +48,8 @@
   }
 
   .pin {
-    top: 404px;
-    right: 180px;
+    top: 494px;
+    right: 160px;
   }
 }
 
@@ -57,8 +64,8 @@
 @media (max-width: 768px) {
 
   .pin {
-    top: 1144px;
-    right: 295px;
+    top: 504px;
+    right: 155px;
   }
 }
 
@@ -73,7 +80,7 @@
   }
 
   .pin {
-    top: 1074px;
+    top: 1174px;
     right: 180px;
   }
 }
@@ -92,8 +99,20 @@
   }
 
   .pin {
-    top: 954px;
+    top: 1154px;
     right: 150px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .heroImg {
+    margin-top: -3rem;
+  }
+
+  .pin {
+    top: 1000px;
+    right: 160px;
   }
 }
 
@@ -104,7 +123,7 @@
   }
 
   .pin {
-    top: 874px;
+    top: 1000px;
     right: 160px;
   }
 }

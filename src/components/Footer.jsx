@@ -1,12 +1,12 @@
 import wifiIcon from "../assets/png/wifinder_icon_trs.png";
-//import styles from './styles/Footer.module.css';
+import styles from './styles/Footer.module.css';
 import emailIcon from "../assets/png/email_icon.png";
 
 const Footer = () => {
     return (
 
-<footer>
-    <div className="w-full contain md:px-6 md:py-4">
+<footer className={`${styles.footer}`}>
+    <div className="w-full ml-3 md:px-6 py-4">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder" className="flex items-center mb-4 sm:mb-0">
                 <img className="h-12 pr-6 "
@@ -15,7 +15,7 @@ const Footer = () => {
                     </img>
                 <span className="self-center text-2xl font-semibold whitespace-nowrap">WiFinder.com</span>
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm sm:mb-0">
+            <ul className="flex items-center mb-6 text-sm sm:mb-0">
                 <li>
                     <a href="/" className="mr-4 hover:underline md:mr-6 ">About</a>
                 </li>
