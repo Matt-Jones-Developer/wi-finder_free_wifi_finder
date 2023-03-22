@@ -39,7 +39,7 @@ const searchCategories = [
     name: "Retail",
   },
 ];
-const SearchForm = () => {
+const SearchCheckboxes = () => {
     // reveal form effect
     // get current state, set state
     const [categories, setCategories] = useState(new Map());
@@ -158,5 +158,5 @@ const SearchForm = () => {
       </div>
     );
 };
-export default SearchForm;
+export default SearchCheckboxes;
 
