@@ -1,7 +1,7 @@
 const searchCategories = [
     {
         value: "leisure",
-        name: "Leisure, Entertainment centres and parks",
+        name: "Leisure",
         categories: [
             "leisure",
             "building.spa",
@@ -12,28 +12,28 @@ const searchCategories = [
     },
     {
         value: "library",
-        name: "Libraries",
+        name: "Library",
         categories: [
             "education.library",
         ],
     },
     {
         value: "museums",
-        name: "Museum",
+        name: "Museums",
         categories: [
             "entertainment.museum",
         ],
     },
     {
         value: "hotels",
-        name: "Hotels and Hostels",
+        name: "Hotels",
         categories: [
             "accommodation",
         ],
     },
     {
         value: "transport",
-        name: "Transport Hubs",
+        name: "Transport",
         categories: [
             "commercial.gas",
             "public_transport",
@@ -42,7 +42,7 @@ const searchCategories = [
     },
     {
         value: "restaurants",
-        name: "Restaurants and Cafes",
+        name: "Restaurants",
         categories: [
             "catering",
         ],
@@ -57,6 +57,7 @@ const searchCategories = [
                 "tourism.information"
             ]
     },
+
 ];
 
 export default searchCategories

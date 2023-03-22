@@ -1,20 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import searchCategories from "../constants/searchCategories";
 import styles from "./styles/CheckBoxes.module.css";
 
-const CheckBoxes = () => {
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
-
+const CheckBoxes = ({ values = [], onChange }) => {
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState(values);
   // define the checkboxes
-  const checkBoxes = [
-    { label: "Leisure", value: "Leisure" },
-    { label: "Library", value: "Library" },
-    { label: "Museums", value: "Museums" },
-    { label: "Hotels", value: "Hotels" },
-    { label: "Restaurants", value: "Restaurants" },
-    { label: "Bars", value: "Bars" },
-    { label: "Cafes", value: "Cafes" },
-    { label: "Transport", value: "Transport" },
-  ];
+  const checkBoxes = searchCategories.map((s) => ({
+    label: s.name,
+    value: s.value,
+  }));
 
   // onClick handler
   const checkHandler = (value) => {
@@ -26,10 +20,14 @@ const CheckBoxes = () => {
       }
     });
   };
-
+  useEffect(() => {
+    onChange(selectedCheckboxes);
+  }, [selectedCheckboxes, onChange]);
   return (
-    <div className={`${styles.checkboxes} grid grid-cols-2 md:grid-cols-4 gap-2 
-      justify-center p-2 text-white ml-16 mt-0`}>
+    <div
+      className={`${styles.checkboxes} grid grid-cols-2 md:grid-cols-4 gap-2 
+      justify-center p-2 text-white ml-16 mt-0`}
+    >
       {checkBoxes.map((checkbox, index) => (
         <label
           className="block w-full flex items-center mr-8 min-w-0"

@@ -1,9 +1,9 @@
-/* NavBar.module.css */
+/* NavBar.module.css */ 
 
-/* .navBarStrip {
+ .navBarStrip {
   background-color: var(--light-gray);
   opacity: 50%;
-} */
+}
 
 .toggleNavList li {
   margin-top: 2rem;
