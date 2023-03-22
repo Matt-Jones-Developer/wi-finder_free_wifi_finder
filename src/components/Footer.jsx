@@ -1,6 +1,7 @@
 import wifiIcon from "../assets/png/wifinder_icon_trs.png";
 //import styles from './styles/Footer.module.css';
 import emailIcon from "../assets/png/email_icon.png";
+import termsofuse from "../assets/pdf/wifinder_terms_of_use.pdf"
 
 const Footer = () => {
     return (
@@ -20,10 +21,10 @@ const Footer = () => {
                     <a href="/" className="mr-4 hover:underline md:mr-6 ">About</a>
                 </li>
                 <li>
-                    <a href="/" className="mr-4 hover:underline md:mr-6 ">Terms of use</a>
+                    <a href={`${termsofuse}`} target="_blank" className="mr-4 hover:underline md:mr-6 ">Terms of use</a>
                 </li>
                 <li>
-                    <a href="/" >
+                    <a href="/contact" >
                         <img className="h-8 pr-6 "
                         src={`${emailIcon}`}
                         alt="email icon"></img>
