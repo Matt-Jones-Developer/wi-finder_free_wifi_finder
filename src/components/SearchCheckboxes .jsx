@@ -6,34 +6,38 @@ import btnStyles from "./styles/Button.module.css";
 import { useNavigate } from "react-router-dom";
 
 const searchCategories = [
-    {
-        value: "leisure",
-        name: "Leisure, Entertainment centres and parks",
-    },
-    {
-        value: "library",
-        name: "Libraries",
-    },
-    {
-        value: "museums",
-        name: "Museum",
-    },
-    {
-        value: "hotels",
-        name: "Hotels and Hostels",
-    },
-    {
-        value: "transport",
-        name: "Transport Hubs",
-    },
-    {
-        value: "restaurants",
-        name: "Restaurants and Cafes",
-    },
-    {
-        value: "retail",
-        name: "Retail",
-    },
+  {
+    value: "leisure",
+    name: "Leisure, Entertainment centres and parks",
+  },
+  {
+    value: "library",
+    name: "Libraries",
+  },
+  {
+    value: "museums",
+    name: "Museum",
+  },
+  {
+    value: "hotels",
+    name: "Hotels and Hostels",
+  },
+  {
+    value: "transport",
+    name: "Transport Hubs",
+  },
+  {
+    value: "restaurants",
+    name: "Restaurants and Cafes",
+  },
+  {
+    value: "bars",
+    name: "Bars & Pubs",
+  },
+  {
+    value: "retail",
+    name: "Retail",
+  },
 ];
 const SearchForm = () => {
     // reveal form effect
@@ -89,67 +93,69 @@ const SearchForm = () => {
     };
 
     return (
-        <div
-            className={`${styles.formInput} container flex text-center
+      <div
+        className={`${styles.formInput} container flex text-center
     p-4 justify-center bg-tone max-w-full p-4 mx-auto mt-6`}
-        >
-            <form
-                className={`transform transition-all duration-500 ease-out 
+      >
+        <form
+          className={`transform transition-all duration-500 ease-out 
        ${revealed ? "revealed" : "translate-y-full"}`}
-                onSubmit={submitHandler}
-            >
-                <div className={`${styles.locationInputControls}`}>
-                    <div className={`${styles.locationInputControl}`}>
-                        <label>Location</label>
-                        <input
-                            type="text"
-                            value={enteredLocation}
-                            onChange={locationChangeHandler}
-                        />
-                    </div>
-                    <div className={`${styles.locationInputControl}`}>
-                        <label>Range</label>
-                        <input
-                            type="number"
-                            min="0.01"
-                            step="0.01"
-                            value={enteredRange}
-                            onChange={rangeChangeHandler}
-                        />
-                    </div>
-                </div>
-                <div>
-                    <ul>
-                        {searchCategories.map(({ name, value }) => (
-                            <li>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        value={value}
-                                        checked={categories[value]}
-                                        onChange={(e) =>
-                                            setCategories(
-                                                categories.set(e.target.value, e.target.checked)
-                                            )
-                                        }
-                                    />
-                                    {name}
-                                </label>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className={`${styles.locationInputAction}`}>
-                    <button
-                        className={`${btnStyles.btn} bg-purps text-white 
+          onSubmit={submitHandler}
+        >
+          <div className={`${styles.locationInputControls}`}>
+            <div className={`${styles.locationInputControl}`}>
+              <label>Location</label>
+              <input
+                type="text"
+                value={enteredLocation}
+                onChange={locationChangeHandler}
+                placeholder="Enter a town or city"
+              />
+            </div>
+            <div className={`${styles.locationInputControl} mt-2`}>
+              <label>Range (1-20000m)</label>
+              <input
+                type="number"
+                min="1"
+                step="0.1"
+                value={enteredRange}
+                onChange={rangeChangeHandler}
+                placeholder="Choose a range in metres"
+              />
+            </div>
+          </div>
+          <div>
+            <ul>
+              {searchCategories.map(({ name, value }) => (
+                <li>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value={value}
+                      checked={categories[value]}
+                      onChange={(e) =>
+                        setCategories(
+                          categories.set(e.target.value, e.target.checked)
+                        )
+                      }
+                    />
+                    {name}
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={`${styles.locationInputAction}`}>
+            <button
+              className={`${btnStyles.btn} bg-purps text-white 
           rounded-full py-2 px-4`}
-                        type="submit"
-                    >
-                        Add Location
-                    </button>
-                </div>
-            </form>
-        </div>
+              type="submit"
+            >
+              Add Location
+            </button>
+          </div>
+        </form>
+      </div>
     );
 };
 export default SearchForm;

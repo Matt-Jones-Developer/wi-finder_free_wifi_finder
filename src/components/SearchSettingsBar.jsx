@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./styles/SearchSettingsBar.module.css";
 import "./styles/SearchSettingsBar.module.css";
 import btnStyles from "./styles/Button.module.css";
-import CheckBoxes from "./Checkboxes";
+import CheckBoxes from "./CheckBoxes";
 
 const SearchSettingsBar = ({ location, range, onSearch, categories }) => {
   const [enteredLocation, setEnteredLocation] = useState(location);
@@ -65,7 +65,7 @@ const SearchSettingsBar = ({ location, range, onSearch, categories }) => {
                 />
               </div>
               <div className={`${styles.locationInputControl} md:mb-4`}>
-                <label className="animate-fadeIn">Range (0.1-2000m)</label>
+                <label className="animate-fadeIn">Range (0.1-20000m)</label>
                 <input
                   type="number"
                   min="1"

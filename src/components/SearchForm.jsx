@@ -50,8 +50,6 @@ const SearchForm = () => {
     navigate(`/results?${queryString}`);
   };
 
-  const handleRefineClick = () => {};
-
   return (
     // Input form flex container
     <div
@@ -98,14 +96,6 @@ const SearchForm = () => {
           >
             Add Location
           </button>
-          {/* refine search options btn */}
-          {/* <button
-            onClick={handleRefineClick}
-            className={`${btnStyles.btnAlt} 
-            rounded-full py-2 px-4`}
-          >
-            Refine Search
-          </button> */}
         </div>
       </form>
     </div>
