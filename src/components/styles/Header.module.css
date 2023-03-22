@@ -35,12 +35,16 @@
 
 @media (max-width: 375px) {
 
+  .header {
+    margin: 0 auto;
+  }
+
   h1 {
     font-size: 84px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 37px;
   }
 
   .tagLine {
