@@ -3,7 +3,7 @@ import projectData from '../data/dev_about.json';
 import CardWrapper from '../components/CardWrapper';
 //import "./style.css"
 
-const DevPage = () => {
+const DevTeam = () => {
   console.log("test")
   console.log(projectData)
   return(
@@ -15,4 +15,4 @@ const DevPage = () => {
 }
 
 
-export default DevPage
+export default DevTeam;
