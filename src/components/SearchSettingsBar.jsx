@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./styles/SearchSettingsBar.module.css";
 import "./styles/SearchSettingsBar.module.css";
 import btnStyles from "./styles/Button.module.css";
-import CheckBoxes from "./CheckBoxes";
+import CheckBoxes from "./Checkboxes";
 
 const SearchSettingsBar = ({ location, range, onSearch, categories }) => {
   const [enteredLocation, setEnteredLocation] = useState(location);
