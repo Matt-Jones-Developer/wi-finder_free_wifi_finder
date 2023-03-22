@@ -44,28 +44,31 @@ const Map = ({ centreLocation, markers, isLoading, onClick }) => {
           lat: centreLocation?.lat || 51.529831,
           lng: centreLocation?.lon || -0.12006,
         }}
+        options={{
+          mapTypeControl: false,
+        }}
         defaultZoom={12}
-        options={{}}
         mapMinHeight="100vh"
         onChange={onMapChange}
       >
-        {!!centreLocation && (
+        {!isLoading && !!centreLocation && (
           <Marker
             lat={centreLocation.lat}
             lng={centreLocation.lon}
             src="/search-pin.svg"
           />
         )}
-        {markers.map((marker, index) => (
-          <Marker
-            key={`${marker.coordinates.lat}-${marker.coordinates.lon}`}
-            lat={marker.coordinates.lat}
-            lng={marker.coordinates.lon}
-            markerId={marker.name}
-            onClick={(e) => handleMarkerClick(e, marker)}
-            src="/place-pin.svg"
-          />
-        ))}
+        {!isLoading &&
+          markers.map((marker, index) => (
+            <Marker
+              key={`${marker.coordinates.lat}-${marker.coordinates.lon}`}
+              lat={marker.coordinates.lat}
+              lng={marker.coordinates.lon}
+              markerId={marker.name}
+              onClick={(e) => handleMarkerClick(e, marker)}
+              src="/place-pin.svg"
+            />
+          ))}
       </GoogleMap>
     </div>
   );

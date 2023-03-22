@@ -50,6 +50,10 @@ body {
   background-color: var(--background);
 }
 
+.body-dark-mode .google-map [role=region] > :first-child {
+  filter: invert(90%) hue-rotate(161deg) saturate(0.5);
+}
+
 h1 {
   font-size: 100px;
 }
