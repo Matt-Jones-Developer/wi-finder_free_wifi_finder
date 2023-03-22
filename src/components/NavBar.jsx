@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavTabs from "./NavTabs";
 import SlidingLogo from "./SlidingLogo";
 // import styles from "./styles/NavBar.module.css";
@@ -15,10 +15,35 @@ const NavBar = () => {
   //   setToggle(false);
   // };
 
+  // handle navbar reveal scroll
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true);
+        console.log("has scrolled old value!:", hasScrolled);
+      } else {
+        setHasScrolled(false);
+        console.log("has scrolled new value!:", hasScrolled);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasScrolled]);
+
   return (
     <>
       {/* build the NavBar */}
-      <nav className="p-5 flex items-center sticky top-0 w-full z-40 mx-auto">
+      <nav
+        className={`object-navbar p-5 flex items-center sticky top-0 w-full z-40 mx-auto
+        transition-colors duration-300
+        ${!hasScrolled ? "bg-transparent" : "bg-white"}
+        `}
+      >
         <div className="flex lg:flex-1 items-center">
           <SlidingLogo />
         </div>
@@ -43,7 +68,6 @@ const NavBar = () => {
         </div>
       </nav>
       {/* mobile toggle nav links [TODO] */}
-      
     </>
   );
 };

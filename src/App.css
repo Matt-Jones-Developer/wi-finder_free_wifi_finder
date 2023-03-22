@@ -65,6 +65,12 @@ body {
   filter: invert(0);
 }
 
+/* navbar */
+.body-dark-mode .object-navbar {
+  background-color: var(--background);
+}
+
+
 h1 {
   font-size: 100px;
 }
