@@ -1,29 +1,29 @@
 import wifiIcon from "../assets/png/wifinder_icon_trs.png";
-import styles from './styles/Footer.module.css';
+//import styles from './styles/Footer.module.css';
 import emailIcon from "../assets/png/email_icon.png";
 
 const Footer = () => {
     return (
 
 <footer>
-    <div class="w-full contain md:px-6 md:py-4">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder" class="flex items-center mb-4 sm:mb-0">
+    <div className="w-full contain md:px-6 md:py-4">
+        <div className="sm:flex sm:items-center sm:justify-between">
+            <a href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder" className="flex items-center mb-4 sm:mb-0">
                 <img className="h-12 pr-6 "
                         src={`${wifiIcon}`}
                         alt="coder icon">
                     </img>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WiFinder.com</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap">WiFinder.com</span>
             </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul className="flex flex-wrap items-center mb-6 text-sm sm:mb-0">
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    <a href="/" className="mr-4 hover:underline md:mr-6 ">About</a>
                 </li>
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Terms & Conditions</a>
+                    <a href="/" className="mr-4 hover:underline md:mr-6 ">Terms of use</a>
                 </li>
                 <li>
-                    <a href="#" >
+                    <a href="/" >
                         <img className="h-8 pr-6 "
                         src={`${emailIcon}`}
                         alt="email icon"></img>
@@ -44,19 +44,19 @@ const Footer = () => {
 
 /*
         <div>
-            <div className={`${styles.footer} gap-8 columns-3 pl-4 pb-20 pt10`}>
-                <div className= "w-full">
-                    <img className="h-12 pr-6 inline"
+            <div classNameName={`${styles.footer} gap-8 columns-3 pl-4 pb-20 pt10`}>
+                <div classNameName= "w-full">
+                    <img classNameName="h-12 pr-6 inline"
                         src={`${wifiIcon}`}
                         alt="coder icon">
                     </img>
-                    <div className="text-2xl font-bold decoration-white">
+                    <div classNameName="text-2xl font-bold decoration-white">
                 
                             WiFinder.com
         
                     </div>
                 </div>
-                <div className= "w-full decoration-white">
+                <div classNameName= "w-full decoration-white">
                     Terms & conditions
                     Privacy Policy
                 </div>
