@@ -4,7 +4,6 @@ import CardWrapper from '../components/CardWrapper';
 //import "./style.css"
 
 const DevTeam = () => {
-  console.log("test")
   console.log(projectData)
   return(
     

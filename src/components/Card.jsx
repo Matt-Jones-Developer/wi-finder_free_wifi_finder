@@ -19,7 +19,9 @@ function Card(props) {
 
   return (
     <div className={`${styles.cardHolder}`}>
-      <div className={`${styles.card} m-4 p-4 rounded shadow-lg dark:bg-gray-900 m-4`}>
+      <div
+        className={`${styles.card} m-4 p-4 rounded shadow-lg dark:bg-gray-900 m-4`}
+      >
         <div className={`${styles.profilePicFrame}`}>
           <img
             className={`${styles.profilePic} object-cover bg-top h-52 w-52 grayscale rounded shadow-lg dark:bg-gray-900`}
@@ -29,26 +31,29 @@ function Card(props) {
         </div>
         <div className={`${styles.textContainer} mr-8`}>
           <h2 className="leading-10 pb-6">{props.name}</h2>
-          <h3 className={`${styles.jobTile} leading-10 mb-6 font-bold text-lime`} >{props.jobTitle}</h3>
+          <h3
+            className={`${styles.jobTile} leading-10 mb-6 font-bold text-lime`}
+          >
+            {props.jobTitle}
+          </h3>
           <p>{props.about}</p>
           <div className="py-5 inline-flex">
-            <a className={`${styles.gitHub} object-contain w-10 h-10 mr-4`} href={props.gitHubUrl}>
-              <img
-                src={github_logo}
-                alt="GitHub Logo"
-              />
+            <a
+              className={`${styles.gitHub} object-contain w-10 h-10 mr-4`}
+              href={props.gitHubUrl}
+            >
+              <img src={github_logo} alt="GitHub Logo" />
             </a>
-            <a className={`${styles.linkedIn} object-contain w-12 h-12`} href={props.linkedInUrl}>
-              <img
-                src={linkedIn_logo}
-                alt="Linkedin Logo"
-              />
+            <a
+              className={`${styles.linkedIn} object-contain w-12 h-12`}
+              href={props.linkedInUrl}
+            >
+              <img src={linkedIn_logo} alt="Linkedin Logo" />
             </a>
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 

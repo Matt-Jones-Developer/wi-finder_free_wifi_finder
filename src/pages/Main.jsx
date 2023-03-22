@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/Main.module.css";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import MainCTA from "../components/MainCTA";
 import Hero from "../components/Hero";
 import PullOutTray from "../components/PullOutTray";
@@ -11,7 +9,7 @@ const Main = () => {
   const handleSearchClick = () => navigate("/results");
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* main section */}
       <main className={`${styles.main}`}>
         <div
@@ -29,7 +27,7 @@ const Main = () => {
       </main>
       {/* tray section */}
       <PullOutTray />
-      <Footer />
+      {/* <Footer /> */}
       
     </>
   );

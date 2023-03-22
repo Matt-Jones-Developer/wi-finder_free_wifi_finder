@@ -1,23 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,
+.form
 input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.formContainer {
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  /* background-color: #fafafa; */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -39,6 +31,7 @@ textarea {
 .contact-form {
   background-color: var(--purps);
   position: relative;
+  padding: 2rem;
 }
 
 .circle {
@@ -72,7 +65,7 @@ textarea {
   left: -13px;
 }
 
-form {
+.form {
   padding: 2.3rem 2.2rem;
   z-index: 10;
   overflow: hidden;
@@ -80,9 +73,10 @@ form {
 }
 
 .title {
-  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  color: var(--text-light);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 30px;
   line-height: 1;
   margin-bottom: 0.7rem;
 }
@@ -95,10 +89,10 @@ form {
 .input {
   width: 100%;
   outline: none;
-  border: 2px solid #fafafa;
+  border: 2px solid var(--bg-light);
   background: none;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+  color: var(--text-light);
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -120,7 +114,7 @@ textarea.input {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: #fafafa;
+  color: var(--bg-light);;
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
@@ -133,10 +127,10 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn {
+.btnForm {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
-  border: 2px solid #fafafa;
+  border: 2px solid var(--bg-light);;
   font-size: 0.95rem;
   color: var(--purps);
   line-height: 1;
@@ -147,7 +141,7 @@ textarea.input {
   margin: 0;
 }
 
-.btn:hover {
+.btnForm:hover {
   background-color: transparent;
   color: #fff;
 }
@@ -208,7 +202,7 @@ textarea.input {
 }
 
 .text {
-  color: #333;
+  color: var(--text-dark);
   margin: 1.5rem 0 2rem 0;
 }
 
@@ -230,7 +224,7 @@ textarea.input {
 }
 
 .social-media p {
-  color: #333;
+  color: var(--text-dark);
 }
 
 .social-icons {
@@ -244,7 +238,7 @@ textarea.input {
   height: 35px;
   border-radius: 5px;
   background: linear-gradient(45deg, #131cc8, #4481eb);
-  color: #fff;
+  color: var(--text-light);
   text-align: center;
   line-height: 35px;
   margin-right: 0.5rem;
@@ -283,7 +277,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #fafafa;
+  background-color: var(--bg-light);
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);
@@ -344,7 +338,7 @@ textarea.input {
     display: none;
   }
 
-  form,
+  .form,
   .contact-info {
     padding: 1.7rem 1.6rem;
   }
@@ -373,7 +367,7 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 
-  .btn {
+  .btnForm {
     padding: 0.45rem 1.2rem;
   }
 }

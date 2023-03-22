@@ -1,16 +1,16 @@
 import React from "react";
 import "./styles/ContactForm.css";
-import github from "../assets/png/github-mark.png";
-import linkedin from "../assets/png/LI-In-Bug.png";
+import github from "../assets/png/github_black.png";
+import linkedin from "../assets/png/linkedin_blue.png";
 import phone from "../assets/png/phone-marker.png";
-import location from "../assets/png/location-marker.png";
-import email from "../assets/png/email-marker.png";
+import location from "../assets/png/location_marker.png";
+import email from "../assets/png/email_marker.png";
 import instagram from "../assets/png/instagram.png";
 import twitter from "../assets/png/twitter.png";
 
 const Form = () => {
   return (
-    <div className="container flex justify-center">
+    <div className="formContainer flex justify-center -mt-32">
       <div className="form">
         <div className="contact-info">
           <h3 className="title">Let's get in touch</h3>
@@ -25,15 +25,15 @@ const Form = () => {
           <div className="info">
             <div className="information">
               <img src={location} className="icon" alt="" />
-              <p>103 Willow Drive, Milton Keynes, MK41 7BB</p>
+              <p>101 Bond Street, London, SE1 9AA</p>
             </div>
             <div className="information">
               <img src={email} className="icon" alt="" />
-              <p>wifinder@gmail.com</p>
+              <p>info@wifinder.com</p>
             </div>
             <div className="information">
               <img src={phone} className="icon" alt="" />
-              <p>01223-786-671</p>
+              <p>01234-567-789</p>
             </div>
           </div>
 
@@ -55,29 +55,29 @@ const Form = () => {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
+          <form action="index.html" autoComplete="off">
             <h3 className="title">Contact us</h3>
             <div className="input-container">
               <input type="text" name="name" className="input" />
-              <label for="">Username</label>
+              <label to="input-container">Username</label>
               <span>Username</span>
             </div>
             <div className="input-container">
               <input type="email" name="email" className="input" />
-              <label for="">Email</label>
+              <label to="input-container">Email</label>
               <span>Email</span>
             </div>
             <div className="input-container">
               <input type="tel" name="phone" className="input" />
-              <label for="">Phone</label>
+              <label tfo="input-container">Phone</label>
               <span>Phone</span>
             </div>
             <div className="input-container textarea">
               <textarea name="message" className="input"></textarea>
-              <label for="">Message</label>
+              <label to="input-container">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="btn" />
+            <input type="submit" value="Send" className="btnForm" />
           </form>
         </div>
       </div>
