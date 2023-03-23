@@ -1,7 +1,24 @@
-.footer{
-    max-height: 200px;
+.footer {
+  max-height: 200px;
 }
 
 .footer span {
   font-size: 22px;
+}
+
+
+@media (max-width: 805px) {
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .textLock {
+    display: none;
+  }
+
+  .wifiLogo{
+    display:none;
+  }
 }
