@@ -3,12 +3,7 @@
   align-items: center;
  }
 
- 
-
-
  .card{
-  /*background-color: var(--bg-grey).8;*/
-  /*background-image: var(--gradient);*/
   max-width: 75%;
   width: 70%;
   padding-top: 5%;
@@ -53,6 +48,10 @@ border-bottom-width: 2px;
     display: flex;
     flex-direction: column;
    }
+
+   .textContainer{
+    max-width: 100%;
+  }  
 
    .profilePicFrame{
     margin-bottom: 5%;
