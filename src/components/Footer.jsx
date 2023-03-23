@@ -2,6 +2,7 @@ import wifiIcon from "../assets/png/wifinder_icon_trs.png";
 import styles from './styles/Footer.module.css';
 import emailIcon from "../assets/png/email_icon.png";
 import termsofuse from "../assets/pdf/wifinder_terms_of_use.pdf"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -38,42 +39,19 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact">
+              <NavLink to="/contact">
                   <img
                     className="h-8 pr-6 "
                     src={`${emailIcon}`}
                     alt="email icon"
                   ></img>
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
         </div>
       </footer>
-
-      /*
-        <div>
-            <div classNameName={`${styles.footer} gap-8 columns-3 pl-4 pb-20 pt10`}>
-                <div classNameName= "w-full">
-                    <img classNameName="h-12 pr-6 inline"
-                        src={`${wifiIcon}`}
-                        alt="coder icon">
-                    </img>
-                    <div classNameName="text-2xl font-bold decoration-white">
-                
-                            WiFinder.com
-        
-                    </div>
-                </div>
-                <div classNameName= "w-full decoration-white">
-                    Terms & conditions
-                    Privacy Policy
-                </div>
-                <div >
-                    Contact Us
-                </div>
-            </div>
-        </div> */
+    
     );
 
 }
