@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./styles/ContactForm.css";
 import github from "../assets/png/github_black.png";
 import linkedin from "../assets/png/linkedin_blue.png";
@@ -9,17 +10,41 @@ import instagram from "../assets/png/instagram.png";
 import twitter from "../assets/png/twitter.png";
 
 const Form = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_toemmvl",
+        "template_u7zdmcr",
+        form.current,
+        "nHLOt7aSsKoc6rIYw"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <div className="formContainer flex justify-center -mt-32">
       <div className="form">
         <div className="contact-info">
           <h3 className="title">Let's get in touch</h3>
           <p className="text">
-            Wifinder is a Great app for locating hotspot in your current
+            Wifinder is a Great app for locating hotspot from your current
             location and allows you to enjoy free internet on the go! It is
             ideal for people who work remotely, making daily commuting more
-            enjoyable and fun. if you have an problems using this App please let
-            us know and one of our Developers will be happy to help.
+            enjoyable and fun. if you have any problems using this app please
+            let us know and one of our Developers will be happy to help.
           </p>
 
           <div className="info">
@@ -55,13 +80,13 @@ const Form = () => {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form action="index.html" autoComplete="off">
+          <form ref={form} onSubmit={sendEmail}>
             <h3 className="title">Contact us</h3>
             <div className="input-container">
               <label to="input-container">Username</label>
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 className="input"
                 placeholder="Enter your name"
               />
@@ -72,7 +97,7 @@ const Form = () => {
               <label to="input-container">Email</label>
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 className="input"
                 placeholder="Enter your email"
               />
