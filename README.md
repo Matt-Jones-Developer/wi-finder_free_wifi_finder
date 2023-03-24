@@ -76,7 +76,7 @@ A 4-team collaborative build using React, Node.js, TailwindCSS and JavaScript.  
 
 AS digital nomads, we work to travel. One day my office is a Starbucks and the next an airport lounge. Utilising local network providers is not always possible, so it’s critical I can find free wi-fi.
 
-We wanted users to be able to quickly log into a web app on their phone and hit one button to easily find my nearest free wi-fi hot-spot. They need to be able to see on the map how they can get there, what food and entertainment is nearby and get logged on to some wifi. When  planning trips in advance we want to be able to put in any destination details to find out what free WiFi is available in that area to the user.
+We wanted users to be able to quickly log into a web app on their phone and hit one button to easily find their nearest free wi-fi hot-spot. They need to be able to see on the map how they can get there, what food and entertainment is nearby and get logged on to some wifi. When  planning trips in advance we want to be able to put in any destination details to find out what free WiFi is available in that area to the user.
 
 SO that way, they can always be connected when they need to be.
 
@@ -98,24 +98,36 @@ Successfully integrating and learning React, Node and Tailwind
 #
 ### Unique Selling Points
 
-TODO
+**Easy-to-use interface:** The WiFinder app is user-friendly and simple to navigate, 
+making it easy for digital nomads and remote workers to find and connect to wifi 
+hotspots quickly and easily.
 
-<div align="center">
-  <img src="./src/assets/screenshots/presentation_demo.png" />
-</div>
+**Location-based services:** The app uses location-based services to find wifi 
+hotspots near the user's current location, which means that users can quickly find a 
+nearby wifi hotspot without having to search manually.
 
-#
+**Comprehensive database:** WiFinder has an extensive database of wifi hotspots, 
+including coffee shops, libraries, and other public areas, making it easy for users
+to find a nearby wifi hotspot wherever they are.
+
+**Reliable connections:** WiFinder only lists reliable and secure wifi hotspots, so 
+users can trust that they'll be able to connect and work without interruption.
+
+**Free service:** WiFinder is a free service, which makes it an excellent choice for 
+budget-conscious digital nomads and remote workers.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+#
 ## Installation
 
 The build is deployed and ready to view it, head to: 
 [ "Wifinder.com"](https://wi-finder.netlify.app) 
 
 ### Installation Instructions
-TODO
+
+Launch the app by opening your web browser and navigating to the app's URL.
 
 
 ## Usage
@@ -213,9 +225,10 @@ npm run test
 Team WiFinder is made up of 4 talented engineers:
 
 🪄 [Marc Hudson](https://github.com/marcahudson26) 
+🪄 [Matt Jones](https://github.com/Matt-Jones-Developer)
 🪄 [Fionnuala O'Donnell](https://github.com/Fi-OD/)
 🪄 [Kelvin Enaro](https://github.com/DeveloperK7E)
-🪄 [Matt Jones](https://github.com/Matt-Jones-Developer)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -251,7 +264,7 @@ Deployed Project Link: [https://wi-finder.netlify.app]
 # 
 ## Acknowledgments
 
-TODO
+N/A
 
 
 #
