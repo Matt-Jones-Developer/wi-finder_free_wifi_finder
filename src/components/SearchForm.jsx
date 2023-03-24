@@ -91,7 +91,7 @@ const SearchForm = () => {
         <div className={`${styles.locationInputAction}`}>
           <button
             className={`${btnStyles.btnAlt} 
-            rounded-full py-2 px-4 mr-6`}
+            rounded-full py-2 px-4`}
             type="submit"
           >
             Add Location

@@ -38,3 +38,10 @@ a:last-child {
     display: block;
   }
 }
+
+@media (min-width: 375px) {
+  .mobile-nav {
+    display: block;
+  }
+}
+

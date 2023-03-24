@@ -9,7 +9,7 @@ const PullOutTray = () => {
   useEffect(() => {
     // Set isVisible to true delay b4 animation trigger
     setIsVisible(true);
-    const timeout = setTimeout(() => setIsVisible(false), 500);
+    const timeout = setTimeout(() => setIsVisible(false), 100);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -24,7 +24,7 @@ const PullOutTray = () => {
         }`}
       >
         {/* colour section */}
-        <div className={`${styles.bottom} pt-2 items-center justify-center`}>
+        <div className={`${styles.bottom} pb-4 items-center justify-center`}>
           {/* content card */}
           <div
             className={`${styles.card} shadow-md p-4 pb-2 flex justify-center

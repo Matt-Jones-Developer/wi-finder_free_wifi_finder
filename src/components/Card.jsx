@@ -16,9 +16,10 @@ const profileImages = {
 
 
 function Card(props) {
+  const { index } = props;
 
   return (
-    <div className={`${styles.cardHolder}`}>
+    <div className={`${styles.cardHolder}`} key={index}>
       <div
         className={`${styles.card} m-4 p-4 rounded shadow-lg dark:bg-gray-900 m-4`}
       >

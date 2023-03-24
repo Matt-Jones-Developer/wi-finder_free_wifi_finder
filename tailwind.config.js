@@ -25,18 +25,34 @@ module.exports = {
         "gradient": "var(--gradient)"
       },
       animation: {
-        fadeIn: "fadeIn 2s ease-in forwards",
+        fadeIn: 'fadeIn 2s ease-in forwards',
         floating: 'floating 1s ease-in-out infinite',
+        slideInLeft: 'slideInLeft 0.5s ease-in-out',
+        slideOutCover: 'slideOutCover 0.5s forwards',
+        slideDown: 'slideDown 0.5s forwards',
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
         },
         floating: {
           '0%': { transform: 'translate(0, 0px)' },
           '50%': { transform: 'translate(0, 5px)' },
           '100%': { transform: 'translate(0, -0px)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: 0, transform: 'translateX(-10rem)' },
+          '60%': { transform: 'translateX(5rem)' },
+          '100%': { opacity: 1, transform: 'translate(0)' }
+        },
+        slideOutCover: {
+          '0%': { opacity: 0, transform: 'translateX(0%)' },
+          '100%': { opacity: 0.9, transform: 'translate(80%)' }
+        },
+        slideDown: {
+          '0%': { opacity: 0, transform: 'translateY(-100%)' },
+          '100%': { opacity: 0.95, transform: 'translate(0%)' },
         }
       },
       variants: {

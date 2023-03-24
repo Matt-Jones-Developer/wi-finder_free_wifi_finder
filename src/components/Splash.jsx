@@ -4,7 +4,7 @@ import freeWifi from "../assets/png/wifi_bnw_logo.png";
 import styles from "./styles/Splash.module.css";
 import SearchForm from "./SearchForm";
 
-// Still [TODO] but a quick splash loader prior to app running would be cool I think
+// [TODO] quick splash loader
 
 const Splash = () => {
   const navigate = useNavigate();

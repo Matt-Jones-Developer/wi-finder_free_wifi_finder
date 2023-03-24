@@ -5,7 +5,7 @@ const Header = () => {
     <div
       // header container
       className={`${styles.header} container flex-1 text-center
-          mt-8 bg-tone max-w-full animate-fadeIn`}
+          mt-10 bg-tone max-w-full animate-fadeIn`}
     >
       <h1>
         <b>WiFi</b>nder

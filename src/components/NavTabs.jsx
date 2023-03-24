@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './styles/NavTabs.module.css'
 
 function NavTabs() {
-  // [TODO] get these active and working - keep the 'selected/active' colour CSS
+  // Desktop LG Nav Items component
   return (
     <>
       <NavLink

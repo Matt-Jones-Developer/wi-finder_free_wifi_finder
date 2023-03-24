@@ -22,4 +22,10 @@
   max-width: 100%;
 }
 
+@media (max-width: 320px) {
+  .locationInputControl input {
+    width: 17rem;
+  }
+}
+
 

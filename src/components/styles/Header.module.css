@@ -36,7 +36,8 @@
 @media (max-width: 375px) {
 
   .header {
-    margin: 0 auto;
+    margin: 1rem auto;
+    margin-top: 3rem;
   }
 
   h1 {

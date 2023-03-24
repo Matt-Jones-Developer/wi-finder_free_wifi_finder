@@ -64,8 +64,8 @@
 @media (max-width: 768px) {
 
   .pin {
-    top: 504px;
-    right: 155px;
+    top: 1204px;
+    right: 265px;
   }
 }
 
@@ -99,7 +99,7 @@
   }
 
   .pin {
-    top: 1154px;
+    top: 1054px;
     right: 150px;
   }
 }
@@ -123,7 +123,7 @@
   }
 
   .pin {
-    top: 1000px;
+    top: 900px;
     right: 160px;
   }
 }

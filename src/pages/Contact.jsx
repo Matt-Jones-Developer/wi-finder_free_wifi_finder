@@ -19,7 +19,7 @@ function Contact() {
     input.addEventListener("blur", blurFunc);
   });
   return (
-    <div className="mt-20 p-4">
+    <div className="mt-4 p-4">
       <Form />
     </div>
   );

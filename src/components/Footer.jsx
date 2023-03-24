@@ -8,8 +8,8 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className={`${styles.footer}`}>
-      <div className="w-full ml-3 md:px-6 py-4">
-        <div className={`${styles.footerContainer} sm:flex sm:items-center sm:justify-between`}>
+      <div className="w-full ml-3 md:px-6 py-4 -mt-2">
+        <div className={`${styles.footerContainer} pt-3 sm:flex sm:items-center sm:justify-between`}>
           <a
             href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder"
             className="flex items-center mb-4 sm:mb-0"
@@ -46,7 +46,7 @@ const Footer = () => {
             <li>
               <NavLink to="/contact">
                 <img
-                  className="h-8 pr-6 "
+                  className="h-8 pr-6 mt-4"
                   src={`${emailIcon}`}
                   alt="email icon"
                 ></img>
