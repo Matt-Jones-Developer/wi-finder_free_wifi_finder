@@ -1,21 +1,15 @@
-.slidingBrand {
-  /* position: relative; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  width: 40vw;
+/* .brandName {
+  all: unset;
 }
 
-.logo {
-  z-index: 99;
+.brandName {
+  display: block;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 320px) {
 
-  .slidingBrand {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-}
+  body .brandName {
+    display: none !important;
+  }
+} */
+

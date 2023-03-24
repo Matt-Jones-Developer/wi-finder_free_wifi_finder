@@ -43,6 +43,7 @@ body {
   color: var(--text-dark);
   background-color: var(--bg-light);
   line-height: 1.5;
+  overflow: hidden;
 }
 
 /* dark mode switches */
@@ -70,6 +71,14 @@ body {
   background-color: var(--background);
 }
 
+/* nav burger toggle */
+.body-dark-mode .bBar {
+  background-color: var(--bg-light);
+}
+
+.mobile-nav {
+  z-index: 999;
+}
 
 h1 {
   font-size: 100px;

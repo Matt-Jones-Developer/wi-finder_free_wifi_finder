@@ -32,6 +32,7 @@ textarea {
   background-color: var(--purps);
   position: relative;
   padding: 2rem;
+  border-radius: .5rem;
 }
 
 .circle {
@@ -215,7 +216,8 @@ textarea.input {
 }
 
 .icon {
-  width: 28px;
+  width: 30px;
+  height: 30px;
   margin-right: 0.7rem;
 }
 
@@ -233,14 +235,9 @@ textarea.input {
   
 }
 
-.social-icons a {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #131cc8, #4481eb);
+.social-icons a img {
+  width: 30px;
   color: var(--text-light);
-  text-align: center;
-  line-height: 35px;
   margin-right: 0.5rem;
   transition: 0.3s;
 }
@@ -292,7 +289,18 @@ textarea.input {
   opacity: 0.2;
 }
 
+@media (max-width: 2000px) {
+    .formContainer {
+        margin-top: -6rem;
+        margin-bottom: 0;
+      }
+}
+
 @media (max-width: 850px) {
+
+  .formContainer {
+    margin-top: 0;
+  }
   .form {
     grid-template-columns: 1fr;
   }

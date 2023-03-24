@@ -19,7 +19,17 @@
   max-width: 100%;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1025px) {
+
+  .splitRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 10px;
+  }
+}
+
+/* @media (min-width: 1650px) {
 
   .searchDiv {
     width: 100%;
@@ -44,7 +54,7 @@
   .locationInputAction {
     grid-area: 2 / 2 / 3 / 3;
   }
-}
+} */
 
 @media (max-width: 1024px) {
 

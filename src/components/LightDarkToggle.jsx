@@ -12,10 +12,10 @@ function LightDarkToggle() {
   document.body.classList.toggle("body-dark-mode", isDarkMode);
 
   return (
-    <div className={`${styles.toggleArea} flex-1`}>
+    <div className={`${styles.toggleArea} flex-1 -ml-2`}>
       <button
         id="light-dark-btn"
-        className="btn btn-dark btn-info ml-6 mt-1"
+        className="btn btn-dark btn-info ml-2 mt-1"
         onClick={handleToggleClick}
       >
         <i

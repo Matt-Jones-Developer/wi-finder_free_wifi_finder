@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LightDarkToggle from "./LightDarkToggle";
 import wifiIcon from "../assets/png/wifinder_icon_trs.png";
 import tw from "tailwind-styled-components";
+import styles from "./styles/SlidingLogo.module.css";
 
 const SlideOutDiv = tw.div`
   absolute
@@ -34,13 +35,13 @@ function SlidingLogo() {
           {/* Nav Icon btn and name link */}
           <Link to="/" className="flex items-center -m-2.5 p-2.5">
             <img
-              className="h-12 pl-4 pr-6"
+              className="h-12 pl-4 pr-4 z-50"
               src={`${wifiIcon}`}
-              alt="coder icon"
+              alt="wifinder logo icon"
             />
           </Link>
           {/* wifinder.com */}
-          <span className="text-2xl font-bold text-accent">
+          <span className={`${styles.brandName} text-2xl font-bold`}>
             <a
               className="nameTag"
               href="https://github.com/Matt-Jones-Developer/wi-finder_free_wifi_finder"

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/Main.module.css";
 import MainCTA from "../components/MainCTA";
@@ -5,6 +6,13 @@ import Hero from "../components/Hero";
 import PullOutTray from "../components/PullOutTray";
 
 const Main = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const navigate = useNavigate();
   const handleSearchClick = () => navigate("/results");
   return (
@@ -28,7 +36,6 @@ const Main = () => {
       {/* tray section */}
       <PullOutTray />
       {/* <Footer /> */}
-      
     </>
   );
 };

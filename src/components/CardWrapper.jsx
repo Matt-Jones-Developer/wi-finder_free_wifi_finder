@@ -4,10 +4,11 @@ import projectData from "../data/dev_about.json";
 
 function CardWrapper() {
     return (
-          <div className="mt-16">
-             {projectData.map((project,i) => < Card index = {i} {...project}/>)}
-          </div>
-
+      <div className="mt-16">
+        {projectData.map((project, i) => (
+          <Card key={`card-${i}`} index={i} {...project} />
+        ))}
+      </div>
     );
 }
 

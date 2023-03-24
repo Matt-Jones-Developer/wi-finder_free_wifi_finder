@@ -1,5 +1,7 @@
 /* .checkboxes {
-  width: 500px;
+  border: 1px red solid;
+  min-width: fit-content;
+  margin-right: -4rem;
 } */
 
 @media (max-width: 1024px) {
